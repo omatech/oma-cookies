@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Omacookies Markup Example</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/omacookies.css">
+    <style>
+        main {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        main .container {
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 16px;
+            text-align: left;
+            width: 100%;
+            max-width: 920px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="omacookies-iframe-youtube">
+                <div class="omacookies-iframe-youtube-content">
+                    <img src="dist/img/omacookies-icon.svg" alt="Configuración de cookies">
+                    <h3 class="omacookies-title">... Oops!</h3>
+                    <p class="omacookies-text">Este contenido ha sido bloqueado debido a tu configuración de cookies.</p>
+                    <button id="omacookies-iframe-btn" class="omacookies-btn-secondary">Personalizar cookies</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="omacookies" class="omacookies">
+        <button id="omacookies-quick-link" class="omacookies-quick-link bottom-right omacookies-hide" aria-labelledby="omacookies-selection-box">
+            <img src="dist/img/omacookies-icon.svg" alt="Configuración de cookies">
+        </button>
+
+        <div class="omacookies-backdrop" id="omacookies-notice-box">
+            <div class="omacookies-notice omacookies-box omacookies-banner"> <!-- omacookies-modal or omacookies-banner -->
+                <header class="omacookies-box-header">
+                    <h3 class="omacookies-title">Esta página web usa cookies</h3>
+                </header>
+                <div class="omacookies-box-body">
+                    <p class="omacookies-text">Las cookies de este sitio web se usan para personalizar el contenido y los anuncios, ofrecer funciones de redes sociales y analizar el tráfico. Además, compartimos información sobre el uso que haga del sitio web con nuestros partners de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que les haya proporcionado o que hayan recopilado a partir del uso que haya hecho de sus servicios.</p>
+                    <a href="" class="omacookies-read-more" aria-label="Leer más acerca de las cookies de esta página">Leer más</a>
+                </div>
+                <footer class="omacookies-box-footer">
+                    <button id="omacookies-selection-btn" class="omacookies-btn-secondary" aria-label="Personalizar las cookies" aria-labelledby="omacookies-selection">Personalizar</button>
+                    <button id="omacookies-accept-all-btn" class="omacookies-btn-primary">Aceptar todas</button>
+                </footer>
+                <button id="omacookies-close-notice" class="omacookies-close" aria-labelledby="omacookies-consent" disabled>
+                    <span class="omacookies-visually-hidden">Cerrar</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="omacookies-backdrop omacookies-hide" id="omacookies-selection-box">
+            <form class="omacookies-selection omacookies-box omacookies-modal" id="omacookies-selection-form">
+                <header class="omacookies-box-header">
+                    <h3 class="omacookies-title">Personalizar Cookies</h3>
+                </header>
+                <div class="omacookies-box-body">
+                    <p class="omacookies-text">Ahora puede personalizar las cookies activas para este sitio.</p>
+                    <a href="" class="omacookies-read-more" aria-label="Leer más acerca de las cookies de esta página">Leer más</a>
+                    <div class="omacookies-switch-list">
+                        <label class="omacookies-switch-group" for="switch-preferencies">
+                            <span class="omacookies-switch-text">Cookies obligatorias</span>
+                            <input id="switch-preferencies" type="checkbox" value="preferences" checked disabled />
+                            <span class="omacookies-switch"></span>
+                        </label>
+                        <label class="omacookies-switch-group" for="switch-statistics">
+                            <span class="omacookies-switch-text">Cookies de análisis</span>
+                            <input id="switch-statistics" type="checkbox" value="statistics" />
+                            <span class="omacookies-switch"></span>
+                        </label>
+                        <label class="omacookies-switch-group" for="switch-marketing">
+                            <span class="omacookies-switch-text">Cookies de publicidad</span>
+                            <input id="switch-marketing" type="checkbox" value="marketing" />
+                            <span class="omacookies-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <footer class="omacookies-box-footer">
+                    <button id="omacookies-select-all-btn" class="omacookies-btn-secondary">Seleccionar todas</button>
+                    <button id="omacookies-accept-selection-btn" class="omacookies-btn-primary">Aceptar selección</button>
+                </footer>
+                <button id="omacookies-close-selection" class="omacookies-close" aria-labelledby="omacookies-selection-box" disabled>
+                    <span class="omacookies-visually-hidden">Cerrar</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    let quicklink = document.getElementById('omacookies-quick-link');
+
+    let notice = document.getElementById('omacookies-notice-box');
+    let selectionBtn = document.getElementById('omacookies-selection-btn');
+    let acceptAllBtn = document.getElementById('omacookies-accept-all-btn');
+    let closeNotice = document.getElementById('omacookies-close-notice');
+
+    let selection = document.getElementById('omacookies-selection-box');
+    let selectAllBtn = document.getElementById('omacookies-select-all-btn');
+    let acceptSelectionBtn = document.getElementById('omacookies-accept-selection-btn');
+    let closeSelection = document.getElementById('omacookies-close-selection');
+
+    let form = document.getElementById('omacookies-selection-form');
+    let checkboxes = form.getElementsByTagName('input');
+
+    let iframeBtn = document.getElementById('omacookies-iframe-btn');
+
+    let backdrops = document.getElementsByClassName('omacookies-backdrop');
+
+    function show(el) {
+        el.classList.remove('omacookies-hide');
+    }
+
+    function hide(el) {
+        el.classList.add('omacookies-hide');
+    }
+
+    function enableCloseModals() {
+        closeNotice.disabled = false;
+        closeSelection.disabled = false;
+        for(let i = 0; i < backdrops.length; i++) {
+            backdrops[i].addEventListener('click', (e) => {
+                if(e.target.classList.contains('omacookies-backdrop')) {
+                    hide(e.target);
+                    show(quicklink);
+                }
+            })
+        }
+    }
+
+    acceptAllBtn.addEventListener('click', () => {
+        hide(notice);
+        show(quicklink);
+        enableCloseModals();
+    })
+
+    closeNotice.addEventListener('click', () => {
+        hide(notice);
+        show(quicklink);
+    })
+
+    selectionBtn.addEventListener('click', () => {
+        hide(notice);
+        show(selection);
+    });
+
+    selectAllBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        for(let i = 0; i < checkboxes.length; i++) {
+            if(!checkboxes[i].checked) {
+                checkboxes[i].checked = true;
+            }
+        }
+    });
+
+    closeSelection.addEventListener('click', (e) => {
+        e.preventDefault();
+        hide(selection);
+        show(quicklink);
+    })
+
+    acceptSelectionBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        hide(selection);
+        show(quicklink);
+        enableCloseModals();
+    })
+
+    iframeBtn.addEventListener('click', () => {
+        hide(quicklink);
+        show(selection);
+    });
+
+    quicklink.addEventListener('click', () => {
+        hide(quicklink);
+        show(selection);
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
+
+</script>
+</html>

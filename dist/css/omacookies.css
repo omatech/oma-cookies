@@ -1,0 +1,495 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap);
+[class^=omacookies] {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^=omacookies] article, [class^=omacookies] aside, [class^=omacookies] details, [class^=omacookies] figcaption, [class^=omacookies] figure, [class^=omacookies] header, [class^=omacookies] hgroup, [class^=omacookies] menu, [class^=omacookies] nav, [class^=omacookies] section {
+  display: block;
+}
+[class^=omacookies] blockquote, [class^=omacookies] q {
+  quotes: none;
+}
+[class^=omacookies] blockquote:before, [class^=omacookies] blockquote:after {
+  content: "";
+  content: none;
+}
+[class^=omacookies] ol, [class^=omacookies] ul {
+  list-style: none;
+}
+[class^=omacookies] q:before, [class^=omacookies] q:after {
+  content: "";
+  content: none;
+}
+[class^=omacookies] table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.omacookies {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.omacookies-backdrop {
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .omacookies-backdrop {
+    padding: 0.75rem;
+  }
+}
+
+.omacookies-banner.omacookies-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.omacookies-banner.omacookies-box .omacookies-box-header,
+.omacookies-banner.omacookies-box .omacookies-box-body,
+.omacookies-banner.omacookies-box .omacookies-box-footer {
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: left;
+  width: 100%;
+  max-width: 33.75rem;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-banner.omacookies-box .omacookies-box-header,
+.omacookies-banner.omacookies-box .omacookies-box-body,
+.omacookies-banner.omacookies-box .omacookies-box-footer {
+    max-width: 45rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omacookies-banner.omacookies-box .omacookies-box-header,
+.omacookies-banner.omacookies-box .omacookies-box-body,
+.omacookies-banner.omacookies-box .omacookies-box-footer {
+    max-width: 60rem;
+  }
+}
+.omacookies-banner.omacookies-box .omacookies-box-body {
+  position: relative;
+  overflow-y: initial;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-banner.omacookies-box .omacookies-box-body {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .omacookies-banner.omacookies-box .omacookies-read-more {
+    position: absolute;
+    left: 1rem;
+    bottom: -3rem;
+  }
+}
+
+.omacookies-box {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.omacookies-box .omacookies-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-box .omacookies-close {
+    top: 1rem;
+    right: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omacookies-box .omacookies-close {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
+.omacookies-box-header {
+  padding: 1rem 2.75rem 1rem 1rem;
+  flex: 0 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-box-header {
+    padding: 2rem 3.625rem 0.75rem 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omacookies-box-header {
+    padding: 3.375rem 5rem 0.5rem;
+  }
+}
+.omacookies-box-body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0 1rem 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-box-body {
+    padding: 0.75rem 2.5rem 0.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omacookies-box-body {
+    padding: 0.5rem 5rem 1.5rem;
+  }
+}
+.omacookies-box-footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .omacookies-box-footer {
+    padding: 0 1rem 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .omacookies-box-footer {
+    padding: 0.75rem 2.5rem 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .omacookies-box-footer {
+    padding: 0.75rem 5rem 3.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .omacookies-box-footer [class^=omacookies-btn] {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .omacookies-box-footer [class^=omacookies-btn] {
+    margin-left: 1rem;
+  }
+}
+
+.omacookies-btn-primary,
+.omacookies-btn-secondary {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 2.125rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-btn-primary,
+.omacookies-btn-secondary {
+    height: 2.625rem;
+    font-size: 0.9375rem;
+  }
+}
+
+.omacookies-btn-primary {
+  background-color: #01d595;
+  color: #fff;
+}
+
+.omacookies-btn-secondary {
+  color: #01d595;
+  background-color: transparent;
+  border: 1px solid #01d595;
+}
+
+.omacookies-close {
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  color: #000;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.omacookies-close:before, .omacookies-close:after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: black;
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 50%;
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+.omacookies-close:after {
+  transform: rotate(-45deg);
+}
+.omacookies-close:hover {
+  opacity: 0.6;
+}
+.omacookies-close:disabled, .omacookies-close[disabled] {
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.omacookies-hide {
+  display: none !important;
+}
+
+.omacookies-iframe-youtube {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  background-color: #4A4A4A;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.omacookies-iframe-youtube-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+.omacookies-iframe-youtube-content img {
+  width: 5.25rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.3;
+}
+@media screen and (max-width: 767px) {
+  .omacookies-iframe-youtube-content img {
+    display: none;
+  }
+}
+.omacookies-iframe-youtube-content .omacookies-title {
+  font-weight: normal;
+  max-width: 17.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-iframe-youtube-content .omacookies-title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 374px) {
+  .omacookies-iframe-youtube-content .omacookies-title {
+    display: none;
+  }
+}
+.omacookies-iframe-youtube-content .omacookies-text {
+  font-size: 0.75rem;
+  max-width: 17.5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 375px) {
+  .omacookies-iframe-youtube-content .omacookies-text {
+    font-size: 0.875rem;
+  }
+}
+.omacookies-iframe-youtube-content .omacookies-btn-secondary {
+  width: 13.75rem;
+}
+
+.omacookies-quick-link {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3.375rem;
+  height: 3.375rem;
+  border-radius: 50%;
+  background-color: #01d595;
+  color: #fff;
+  cursor: pointer;
+  top: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .omacookies-quick-link {
+    width: 2.375rem;
+    height: 2.375rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+}
+.omacookies-quick-link img {
+  flex: 0 0 auto;
+  height: auto;
+  width: 2.125rem;
+}
+@media screen and (max-width: 767px) {
+  .omacookies-quick-link img {
+    width: 1.5rem;
+  }
+}
+.omacookies-quick-link.bottom-left {
+  top: auto;
+  right: auto;
+}
+.omacookies-quick-link.top-left {
+  bottom: auto;
+  right: auto;
+}
+.omacookies-quick-link.bottom-right {
+  top: auto;
+  left: auto;
+}
+.omacookies-quick-link.top-right {
+  bottom: auto;
+  left: auto;
+}
+
+.omacookies-modal {
+  max-width: 48.75rem;
+  max-height: 100%;
+  flex: 0 0 auto;
+}
+
+.omacookies-read-more {
+  display: inline-block;
+  color: #b862ed;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  text-decoration: underline;
+}
+
+.omacookies-switch-group {
+  border-bottom: 1px solid #DEDEDE;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-switch-group {
+    padding: 1.5rem 1rem 1.5rem 0;
+  }
+}
+.omacookies-switch-group input {
+  display: none;
+}
+.omacookies-switch-group .omacookies-switch-text {
+  font-size: 0.875rem;
+  flex: 1 1 auto;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-switch-group .omacookies-switch-text {
+    font-size: 1rem;
+  }
+}
+.omacookies-switch-group .omacookies-switch {
+  flex: 0 0 auto;
+  margin-left: 1rem;
+  cursor: pointer;
+  width: 2.625rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: #D8D8D8;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.omacookies-switch-group .omacookies-switch:after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 0.625rem;
+  position: absolute;
+  left: 0.125rem;
+  top: 0.125rem;
+  background-color: #fff;
+  transition: inherit;
+}
+.omacookies-switch-group input:checked + .omacookies-switch {
+  background-color: #01d595;
+}
+.omacookies-switch-group input:checked + .omacookies-switch:after {
+  left: 1.25rem;
+}
+.omacookies-switch-group input:disabled + .omacookies-switch {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.omacookies-title {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .omacookies-title {
+    font-size: 1.125rem;
+  }
+}
+
+.omacookies-text {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.omacookies-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

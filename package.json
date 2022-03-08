@@ -1,0 +1,34 @@
+{
+  "name": "oma-cookies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production && npm run uglify",
+    "production": "mix --production",
+    "uglify": "uglifyjs --compress --mangle --output ./dist/js/omacookies.min.js -- ./dist/js/omacookies.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://alorman-omatech@bitbucket.org/omatechteam/oma-cookies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/omatechteam/oma-cookies#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.49.8"
+  },
+  "dependencies": {
+    "include-media": "^1.4.10",
+    "sass-loader": "^12.6.0",
+    "sass-rem": "^3.0.0"
+  }
+}

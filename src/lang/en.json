@@ -1,0 +1,9 @@
+{
+    "content_blocked_title": "Iframe blocked",
+    "content_blocked_text": "This content is bloqued due to your cookies configuration.",
+    "btn.change_cookies_preferences": "Change cookie preferences",
+    "consent_preferences_title": "Preferences",
+    "consent_statistics_title": "Statistics",
+    "consent_marketing_title": "Marketing",
+    "accept_selection": "Accept selection"
+}

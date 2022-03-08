@@ -1,0 +1,11 @@
+{
+    "name": "omatech/oma-cookies",
+    "type": "library",
+    "authors": [
+        {
+            "name": "OMA Technologies",
+            "email": "info@omatech.com"
+        }
+    ],
+    "require": {}
+}

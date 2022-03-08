@@ -1,0 +1,17 @@
+$clr-primary: #01d595;
+$clr-secondary: #b862ed;
+$clr-white: #fff;
+$clr-black: #000;
+$clr-bg-dark: #4A4A4A;
+$clr-switch-off: #D8D8D8;
+$clr-border: #DEDEDE;
+$clr-overlay: rgba($clr-black, 0.18);
+$default-font-family: 'Open Sans', sans-serif;
+$w-medium: 500;
+$w-bold: 700;
+$breakpoints: (
+    'phone': 375px,
+    'tablet': 768px,
+    'desktop': 1024px
+);
+$button-border-radius: 6px;

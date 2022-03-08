@@ -1,0 +1,16 @@
+{
+    "consent_preferences_title": "Preferencias",
+    "consent_statistics_title": "Estadísticas",
+    "consent_marketing_title": "Comerciales",
+    "accept_selection": "Aceptar selección",
+    "consent_box_title": "Esta página web usa cookies",
+    "consent_box_description": "Las cookies de este sitio web se usan para personalizar el contenido y los anuncios, ofrecer funciones de redes sociales y analizar el tráfico. Además, compartimos información sobre el uso que haga del sitio web con nuestros partners de redes sociales, publicidad y análisis web, quienes pueden combinarla con otra información que les haya proporcionado o que hayan recopilado a partir del uso que haya hecho de sus servicios.",
+    "read_more": "Leer más",
+    "read_more_label": "Leer más acerca de las cookies de esta página",
+    "customize_cookies_btn": "Personalizar",
+    "customize_cookies_btn_label": "Personalizar las cookies",
+    "accept_all_cookies_btn": "Aceptar todas",
+    "content_blocked_title": "... Ups!",
+    "content_blocked_text": "Este contenido ha sido bloqueado debido a tu configuración de cookies.",
+    "content_blocked_btn": "Personalizar cookies"
+}

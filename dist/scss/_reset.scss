@@ -1,0 +1,37 @@
+[class^="omacookies"] {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote {
+        &:before, &:after {
+            content: '';
+            content: none;
+        }
+    }
+    ol, ul {
+        list-style: none;
+    }
+    q {
+        &:before, &:after {
+            content: '';
+            content: none;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+}

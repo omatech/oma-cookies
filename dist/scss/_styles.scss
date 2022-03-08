@@ -1,0 +1,409 @@
+.omacookies {
+    font-family: $default-font-family;
+    @include rem(font-size, 16px);
+}
+
+.omacookies-backdrop {
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $clr-overlay;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include rem(padding, 16px);
+    @include media('screen', '<tablet') {
+        @include rem(padding, 12px);
+    }
+}
+
+.omacookies-banner {
+    &.omacookies-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        .omacookies-box-header,
+        .omacookies-box-body,
+        .omacookies-box-footer {
+            margin: 0 auto;
+            @include rem(padding-left, 16px);
+            @include rem(padding-right, 16px);
+            text-align: left;
+            width: 100%;
+            @include rem(max-width, 540px);
+            @include media('screen', '>=tablet') {
+                @include rem(max-width, 720px);
+            }
+            @include media('screen', '>=desktop') {
+                @include rem(max-width, 960px);
+            }
+        }
+        .omacookies-box-body {
+            position: relative;
+            overflow-y: initial;
+            @include media('screen', '>=tablet') {
+              padding-bottom: 0;
+            }
+        }
+        .omacookies-read-more {
+            @include media('screen', '>=tablet') {
+                position: absolute;
+                @include rem(left, 16px);
+                @include rem(bottom, -48px);
+            }
+        }
+    }
+}
+
+.omacookies-box {
+    background-color: $clr-white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    .omacookies-close {
+        position: absolute;
+        @include rem(top, 8px);
+        @include rem(right, 8px);
+        z-index: 2;
+        @include media('screen', '>=tablet') {
+            @include rem(top, 16px);
+            @include rem(right, 16px);
+        }
+        @include media('screen', '>=desktop') {
+            @include rem(top, 20px);
+            @include rem(right, 20px);
+        }
+    }
+    &-header {
+        @include rem(padding, 16px 44px 16px 16px);
+        flex: 0 0 auto;
+        width: 100%;
+        @include media('screen', '>=tablet') {
+            @include rem(padding, 32px 58px 12px 40px);
+        }
+        @include media('screen', '>=desktop') {
+            @include rem(padding, 54px 80px 8px);
+        }
+    }
+    &-body {
+        flex: 1 1 auto;
+        overflow-y: auto;
+        @include rem(padding, 0 16px 16px);
+        width: 100%;
+        @include media('screen', '>=tablet') {
+            @include rem(padding, 12px 40px 12px);
+        }
+        @include media('screen', '>=desktop') {
+            @include rem(padding, 8px 80px 24px);
+        }
+    }
+    &-footer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        @include media('screen', '<tablet') {
+            @include rem(padding, 0 16px 16px);
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        @include media('screen', '>=tablet') {
+            @include rem(padding, 12px 40px 32px);
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        @include media('screen', '>=desktop') {
+            @include rem(padding, 12px 80px 50px);
+        }
+        [class^="omacookies-btn"] {
+            @include media('screen', '<tablet') {
+                width: 100%;
+                @include rem(margin-top, 8px);
+            }
+            @include media('screen', '>=tablet') {
+                @include rem(margin-left, 16px);
+            }
+        }
+    }
+}
+
+.omacookies-btn-primary,
+.omacookies-btn-secondary {
+    font-weight: $w-bold;
+    cursor: pointer;
+    @include rem(font-size, 14px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    @include rem(height, 34px);
+    @include rem(padding, 8px 16px);
+    text-align: center;
+    border-radius: $button-border-radius;
+    @include media('screen', '>=tablet') {
+        @include rem(height, 42px);
+        @include rem(font-size, 15px);
+    }
+}
+
+.omacookies-btn-primary {
+    background-color: $clr-primary;
+    color: $clr-white;
+}
+
+.omacookies-btn-secondary {
+    color: $clr-primary;
+    background-color: transparent;
+    border: 1px solid $clr-primary;
+}
+
+.omacookies-close {
+    background-color: transparent;
+    @include rem(width, 32px);
+    @include rem(height, 32px);
+    color: $clr-black;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:before, &:after {
+        content: "";
+        display: block;
+        @include rem(width, 20px);
+        @include rem(height, 2px);
+        background-color: black;
+        position: absolute;
+        @include rem(left, calc(50% - 10px));
+        top: 50%;
+        transform-origin: center;
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        opacity: 0.6;
+    }
+    &:disabled, &[disabled] {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+}
+
+.omacookies-hide {
+    display: none!important;
+}
+
+.omacookies-iframe-youtube {
+    width: 100%;
+    padding-bottom: calc(9 / 16 * 100%);
+    position: relative;
+    background-color: $clr-bg-dark;
+    color: $clr-white;
+    font-family: $default-font-family;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include rem(padding, 16px);
+        text-align: center;
+        img {
+            @include rem(width, 84px);
+            @include rem(margin-bottom, 8px);
+            opacity: 0.3;
+            @include media('screen', '<tablet') {
+                display: none;
+            }
+        }
+        .omacookies-title {
+            font-weight: normal;
+            @include rem(max-width, 280px);
+            @include rem(font-size, 24px);
+            @include rem(margin-bottom, 8px);
+            line-height: 1.4;
+            @include media('screen', '>=tablet') {
+                @include rem(font-size, 28px);
+            }
+            @include media('screen', '<phone') {
+                display: none;
+            }
+        }
+        .omacookies-text {
+            @include rem(font-size, 12px);
+            @include rem(max-width, 280px);
+            @include rem(margin-bottom, 16px);
+            @include media('screen', '>=phone') {
+                @include rem(font-size, 14px);
+            }
+        }
+        .omacookies-btn-secondary {
+            @include rem(width, 220px);
+        }
+    }
+}
+
+.omacookies-quick-link {
+    position: fixed;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include rem(width, 54px);
+    @include rem(height, 54px);
+    border-radius: 50%;
+    background-color: $clr-primary;
+    color: $clr-white;
+    cursor: pointer;
+    @include rem(top, 24px);
+    @include rem(right, 24px);
+    @include rem(bottom, 24px);
+    @include rem(left, 24px);
+    @include media('screen', '<tablet') {
+        @include rem(width, 38px);
+        @include rem(height, 38px);
+        @include rem(top, 12px);
+        @include rem(right, 12px);
+        @include rem(bottom, 12px);
+        @include rem(left, 12px);
+    }
+    img {
+        flex: 0 0 auto;
+        height: auto;
+        @include rem(width, 34px);
+        @include media('screen', '<tablet') {
+            @include rem(width, 24px);
+        }
+    }
+    &.bottom-left {
+        top: auto;
+        right: auto;
+    }
+    &.top-left {
+        bottom: auto;
+        right: auto;
+    }
+    &.bottom-right {
+        top: auto;
+        left: auto;
+    }
+    &.top-right {
+        bottom: auto;
+        left: auto;
+    }
+}
+
+.omacookies-modal {
+    @include rem(max-width, 780px);
+    max-height: 100%;
+    flex: 0 0 auto;
+}
+
+.omacookies-read-more {
+    display: inline-block;
+    color: $clr-secondary;
+    font-weight: $w-bold;
+    @include rem(font-size, 14px);
+    line-height: 1.8;
+    text-decoration: underline;
+}
+
+.omacookies-switch-group {
+    border-bottom: 1px solid $clr-border;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include rem(padding, 12px 0);
+    @include media('screen', '>=tablet') {
+        @include rem(padding, 24px 16px 24px 0);
+    }
+    input {
+        display: none;
+    }
+    .omacookies-switch-text {
+        @include rem(font-size, 14px);
+        flex: 1 1 auto;
+        line-height: 1.6;
+        text-align: left;
+        font-weight: $w-medium;
+        @include media('screen', '>=tablet') {
+            @include rem(font-size, 16px);
+        }
+    }
+    .omacookies-switch {
+        flex: 0 0 auto;
+        @include rem(margin-left, 16px);
+        cursor: pointer;
+        @include rem(width, 42px);
+        @include rem(height, 24px);
+        @include rem(border-radius, 12px);
+        background-color: $clr-switch-off;
+        position: relative;
+        transition: all 0.3s ease;
+        &:after {
+            content: "";
+            display: block;
+            @include rem(width, 20px);
+            @include rem(height, 20px);
+            @include rem(border-radius, 10px);
+            position: absolute;
+            @include rem(left, 2px);
+            @include rem(top, 2px);
+            background-color: $clr-white;
+            transition: inherit;
+        }
+    }
+    input:checked + .omacookies-switch {
+        background-color: $clr-primary;
+        &:after {
+            @include rem(left, 20px);
+        }
+    }
+    input:disabled + .omacookies-switch {
+        opacity: 0.3;
+        cursor: default;
+    }
+}
+
+.omacookies-title {
+    @include rem(font-size, 15px);
+    line-height: 1.8;
+    font-weight: $w-bold;
+    @include media('screen', '>=tablet') {
+        @include rem(font-size, 18px);
+    }
+}
+
+.omacookies-text {
+    @include rem(font-size, 14px);
+    line-height: 1.8;
+    @include rem(margin-bottom, 8px);
+}
+
+.omacookies-visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
