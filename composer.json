@@ -1,6 +1,8 @@
 {
     "name": "omatech/oma-cookies",
+    "description": "Cookie consent manager",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "OMA Technologies",
