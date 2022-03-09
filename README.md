@@ -7,12 +7,11 @@
         <img src="img/omatech-logo.png" alt="Omatech Logo" width="80" height="80">
     </a>
     <h1 align="center">Oma-cookies</h1>
-    <p align="center">Built-in solution that allows the control of cookies and trackers, enabling GDPR compliance for websites.</p>
-    <a href="https://github.com/omatech/oma-cookies/issues">Report Bug</a>
+    <p align="center">Built-in solution that allows the control of cookies, <br>enabling GDPR compliance for Omatech internal projects.</p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<h2>Table of contents</h3>
+<h2>Table of contents</h2>
 <ol>
     <li>
         <a href="#built-with">Built With</a>
@@ -29,62 +28,75 @@
     <li><a href="#contact">Contact</a></li>
 </ol>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<p align="right"><a href="#top">↑ Back to top</a></p>git
 
 <!-- BUILT WITH -->
-## Built With
+<h2 id="built-with">Built With</h2>
+<ul>
+  <li><a href="https://www.npmjs.com/">npm</a></li>
+  <li><a href="https://webpack.js.org/">Webpack</a></li>
+  <li><a href="http://vanilla-js.com/">Vanilla JS</a></li>
+</ul>
 
-* [npm](https://www.npmjs.com/)
-* [Webpack](https://webpack.js.org/)
-* [Vanilla JS](http://vanilla-js.com/)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- GETTING STARTED -->
-## Getting Started
+<h2 id="getting-started">Getting started</h2>
 
-### Prerequisites
-To be able to compile this project, you have to install [uglify-js](https://www.npmjs.com/package/uglify-js) globally in your machine. In order to do so, run in your terminal:
+<h3 id="prerequisites">Prerequisites</h3>
+<p>To be able to compile this project, you have to install <a href="https://www.npmjs.com/package/uglify-js">uglify-js</a> globally in your machine. <br>In order to do so, run in your terminal:</p>
+
 ```sh
 npm i uglify-js -g
 ```
 
-### Installation
+<h3 id="installation">Installation</h3>
 
-1. Clone the repo
+<ol>
+  <li>
+  Clone the repo
+
    ```sh
    git clone https://github.com/omatech/oma-cookies.git
    ```
-2. Install NPM packages
-   ```sh
+  </li>
+  <li>
+  Install NPM packages
+
+  ```sh
    npm install
    ```
-3. You can see a working example opening the `index.html` file
+  </li>
+  <li>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+   You can see a working example opening the `index.html` file
+  </li>
+</ol>
+
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- DOCUMENTATION -->
-## Documentation
+<h2 id="documentation">Documentation</h2>
+<p>The documentation for Oma-cookies package is included in this repo in the root directory.
 
-Oma-cookies documentation is included in this repo in the root directory.
-See `DOCUMENTATION.md` for information about installing and configuring oma-cookies package in your project.
+See `DOCUMENTATION.md` for information about installing and configuring oma-cookies package in your project.</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- LICENSE -->
-## License
+<h2 id="license">License</h2>
+<p>We do not want anyone outside Omatech to use this source code, but if for any reason our code is stolen or otherwise obtained, we want to have a license that does not allow disclosure of any kind.
+</p>
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- CONTACT -->
-## Contact
+<h2 id="contact">Contact</h2>
 
-Email: [info@omatech.com](mailto:info@omatech.com)
+<ul>
+  <li>Website: <a href="https://www.omatech.com">www.omatech.com</a></li>
+  <li>Email: <a href="mailto:info@omatech.com">info@omatech.com</a></li>
+  <li>Project Link: <a href="https://github.com/omatech/oma-cookies">https://github.com/omatech/oma-cookies</a></li>
+</ul>
 
-Project Link: [https://github.com/omatech/oma-cookies](https://github.com/omatech/oma-cookies)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right"><a href="#top">↑ Back to top</a></p>
