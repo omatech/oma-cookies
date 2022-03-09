@@ -70,3 +70,27 @@ OMAC.strContainsAny = (haystack, needles) => {
 OMAC.arrayIntersec = (array1, array2) => {
     return array1.filter(x => array2.includes(x));
 };
+
+/**
+ * Adds the params, classes & animations to open modal
+ * @param {object} modal
+ */
+OMAC.openModal = (modal) => {
+    modal.element.classList.remove("omacookies-hide");
+    setTimeout(() => {
+        modal.element.classList.add("fade-in");
+    }, 300);
+    this.isOpen = true;
+}
+
+/**
+ * Adds the params, classes & animations to close modal
+ * @param {object} modal
+ */
+OMAC.closeModal = (modal) => {
+    modal.element.classList.remove("fade-in");
+    setTimeout(() => {
+        modal.element.classList.add("omacookies-hide");
+    }, 300);
+    this.isOpen = false;
+}

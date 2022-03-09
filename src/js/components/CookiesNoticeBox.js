@@ -6,18 +6,16 @@ const NoticeBox = {
 };
 
 NoticeBox.close = function () {
-    this.element.classList.add('omacookies-hide');
-    this.isOpen = false;
+    OMAC.closeModal(this);
 };
 
 NoticeBox.open = function () {
-    this.element.classList.remove('omacookies-hide');
-    this.isOpen = true;
+    OMAC.openModal(this);
 };
 
 NoticeBox.buildStructure = function () {
     const html = `
-        <div id="${this.elementId}" class="omacookies-backdrop ${this.isOpen || !OMAC.hasResponded ? '' : 'omacookies-hide'}">
+        <div id="${this.elementId}" class="omacookies-backdrop ${this.isOpen || !OMAC.hasResponded ? 'fade-in' : 'omacookies-hide'}">
             <div class="omacookies-notice omacookies-box omacookies-${OMAC.format}">
                 <header class="omacookies-box-header">
                     <h3 class="omacookies-title">${OMAC.trans.consent_box_title}</h3>
@@ -38,9 +36,6 @@ NoticeBox.buildStructure = function () {
                         ${OMAC.trans.accept_all_cookies_btn}
                     </button>
                 </footer>
-                <button id="omacookies-close-notice" class="omacookies-close" aria-labelledby="omacookies-consent" disabled>
-                    <span class="omacookies-visually-hidden">${OMAC.trans.close}</span>
-                </button>
             </div>
         </div>
     `.trim();
@@ -50,13 +45,14 @@ NoticeBox.buildStructure = function () {
 
     const struc = template.firstElementChild;
 
-    struc.querySelector('#omacookies-close-notice').addEventListener("click", () => this.close());
     struc.querySelector('#omacookies-selection-btn').addEventListener("click", () => {
-        console.log('TODO: OPEN COOKIES CONFIG POPUP');
+        this.close();
+        OMAC.SelectionModal.open();
     });
     struc.querySelector('#omacookies-accept-all-btn').addEventListener("click", () => {
         window.dispatchEvent(new CustomEvent('update-consent-config', {detail: 'all'}));
         this.close();
+        OMAC.QuickLink.show();
     });
 
     return struc;

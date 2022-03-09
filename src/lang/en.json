@@ -1,9 +1,20 @@
 {
-    "content_blocked_title": "Iframe blocked",
-    "content_blocked_text": "This content is bloqued due to your cookies configuration.",
-    "btn.change_cookies_preferences": "Change cookie preferences",
-    "consent_preferences_title": "Preferences",
-    "consent_statistics_title": "Statistics",
-    "consent_marketing_title": "Marketing",
-    "accept_selection": "Accept selection"
+    "consent_box_title": "This website uses cookies",
+    "consent_box_description": "We use cookies to collect and analyse information on site performance and usage, to provide social media features and to enhace and customise content and advertisements. In addition, we share information about your use of the website with our social media, advertisers and web analytics partners, who may combine it with other information they have collected from your use of their services.",
+    "read_more": "Learn more",
+    "read_more_label": "Learn more about cookies on this site",
+    "customize_cookies_btn": "Settings",
+    "customize_cookies_btn_label": "Cookie settings",
+    "accept_all_cookies_btn": "Allow all",
+    "content_blocked_title": "... Oops!",
+    "content_blocked_text": "This content has been blocked due to your cookie settings.",
+    "content_blocked_btn": "Manage cookies",
+    "select_box_title": "Cookie settings",
+    "select_box_description": "Here you can manage the active cookies for this site.",
+    "select_mandatory_title": "Mandatory cookies",
+    "select_statistics_title": "Analytics cookies",
+    "select_marketing_title": "Marketing cookies",
+    "select_all_btn": "Select all",
+    "accept_selection_btn": "Allow selected",
+    "quick_link_title": "Cookie settings"
 }
