@@ -10,7 +10,6 @@ const OMACookies = {
     hasResponded: false,
     consent: {
         all: false,
-        preferences: false,
         statistics: false,
         marketing: false
     },
@@ -22,12 +21,13 @@ const OMACookies = {
     trans: {},
     readMoreLink: "#",
     elementId: "omacookies",
-    format: "banner", //banner or modal
+    format: "modal", //banner or modal
+    quickLinkPosition: "bottom-right" // top-right top-left bottom-right bottom-left
 };
 
 setReadOnlyProperty(OMACookies, "consentUpdatedEvent", new Event('consent-updated'));
 setReadOnlyProperty(OMACookies, "openConsentBoxEvent", new Event('open-consent-box'));
-setReadOnlyProperty(OMACookies, "consentTypes", ['preferences', 'statistics', 'marketing']);
+setReadOnlyProperty(OMACookies, "consentTypes", ['statistics', 'marketing']);
 
 OMACookies.setLang = function (lang) {
     this.lang = lang;

@@ -4,6 +4,8 @@
 }
 
 .omacookies-backdrop {
+    opacity: 0;
+    transition: opacity 0.3s ease;
     position: fixed;
     z-index: 998;
     left: 0;
@@ -18,6 +20,9 @@
     @include rem(padding, 16px);
     @include media('screen', '<tablet') {
         @include rem(padding, 12px);
+    }
+    &.fade-in {
+        opacity: 1;
     }
 }
 
@@ -62,7 +67,7 @@
 }
 
 .omacookies-box {
-    background-color: $clr-white;
+    background-color: $clr-bg;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -156,7 +161,7 @@
 
 .omacookies-btn-primary {
     background-color: $clr-primary;
-    color: $clr-white;
+    color: $clr-bg;
 }
 
 .omacookies-btn-secondary {
@@ -169,7 +174,7 @@
     background-color: transparent;
     @include rem(width, 32px);
     @include rem(height, 32px);
-    color: $clr-black;
+    color: $clr-text;
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -206,10 +211,17 @@
     padding-bottom: calc(9 / 16 * 100%);
     position: relative;
     background-color: $clr-bg-dark;
-    color: $clr-white;
+    color: $clr-bg;
     font-family: $default-font-family;
     overflow-x: hidden;
     overflow-y: auto;
+    iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
     &-content {
         position: absolute;
         left: 0;
@@ -268,7 +280,7 @@
     @include rem(height, 54px);
     border-radius: 50%;
     background-color: $clr-primary;
-    color: $clr-white;
+    color: $clr-bg;
     cursor: pointer;
     @include rem(top, 24px);
     @include rem(right, 24px);
@@ -365,7 +377,7 @@
             position: absolute;
             @include rem(left, 2px);
             @include rem(top, 2px);
-            background-color: $clr-white;
+            background-color: $clr-bg;
             transition: inherit;
         }
     }
