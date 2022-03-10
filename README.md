@@ -4,7 +4,7 @@
 <!-- PROJECT INTRO -->
 <div align="center">
     <a href="https://github.com/omatech/oma-cookies">
-        <img src="img/omatech-logo.png" alt="Omatech Logo" width="80" height="80">
+        <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQFxVreSDp08_w/company-logo_200_200/0/1646817864804?e=1654732800&v=beta&t=MOoMzAXsSOpcBj9ro350Ky98jNJp3LO2IwbL_r61TeM" alt="Omatech Logo" width="80" height="80">
     </a>
     <h1 align="center">Oma-cookies</h1>
     <p align="center">Built-in solution that allows the control of cookies, <br>enabling GDPR compliance for Omatech internal projects.</p>
@@ -13,9 +13,7 @@
 <!-- TABLE OF CONTENTS -->
 <h2>Table of contents</h2>
 <ol>
-    <li>
-        <a href="#built-with">Built With</a>
-    </li>
+    <li><a href="#built-with">Built With</a></li>
     <li>
         <a href="#getting-started">Getting Started</a>
         <ul>
@@ -28,7 +26,7 @@
     <li><a href="#contact">Contact</a></li>
 </ol>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>git
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- BUILT WITH -->
 <h2 id="built-with">Built With</h2>
@@ -96,7 +94,8 @@ See `DOCUMENTATION.md` for information about installing and configuring oma-cook
 <ul>
   <li>Website: <a href="https://www.omatech.com">www.omatech.com</a></li>
   <li>Email: <a href="mailto:info@omatech.com">info@omatech.com</a></li>
-  <li>Project Link: <a href="https://github.com/omatech/oma-cookies">https://github.com/omatech/oma-cookies</a></li>
+  <li>LinkedIn: <a href="https://www.linkedin.com/company/omatech.com/">LinkedIn Omatech</a></li>
+  <li>Project Link: <a href="https://github.com/omatech/oma-cookies">GitHub Oma-cookies</a></li>
 </ul>
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
