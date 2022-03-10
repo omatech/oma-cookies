@@ -251,6 +251,7 @@ Have in mind you will need a SCSS preprocessor running in your project if you wa
 In order to do so, you will have to import the SCSS files of the oma-cookies project in the proper order and add your custom `variables-override.scss` stylesheet right after the package `_variables.scss` file.
 
 ```scss
+@import "vendor/omatech/oma-cookies/dist/scss/base";
 @import "vendor/omatech/oma-cookies/dist/scss/reset";
 @import "vendor/omatech/oma-cookies/dist/scss/variables";
 @import "variables-override"; // your custom variables stylesheet
