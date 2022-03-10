@@ -1,0 +1,10 @@
+{
+    "/src/css/imports.css": "/src/css/imports.css",
+    "/dist/img/omacookies-icon.svg": "/dist/img/omacookies-icon.svg",
+    "/dist/scss/_reset.scss": "/dist/scss/_reset.scss",
+    "/dist/scss/_styles.scss": "/dist/scss/_styles.scss",
+    "/dist/scss/_variables-override.scss": "/dist/scss/_variables-override.scss",
+    "/dist/scss/_variables.scss": "/dist/scss/_variables.scss",
+    "/dist/scss/imports.scss": "/dist/scss/imports.scss",
+    "/dist/scss/omacookies.scss": "/dist/scss/omacookies.scss"
+}

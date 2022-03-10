@@ -20,9 +20,9 @@ QuickLink.buildStructure = function () {
         <button id="${this.elementId}"
             class="omacookies-quick-link ${OMAC.quickLinkPosition} ${this.isShown || OMAC.hasResponded ? '' : 'omacookies-hide'}"
             aria-labelledby="${OMAC.SelectionModal.elementId}">
-            <img src="./dist/img/omacookies-icon.svg" alt="${OMAC.trans.quick_link_title}">
+            <i class="omacookies-cookie-icon"></i>
         </button>
-    `.trim();
+    `;
 
     const template = document.createElement('button');
     template.innerHTML = html;
@@ -30,8 +30,8 @@ QuickLink.buildStructure = function () {
     const struc = template.firstElementChild;
 
     struc.addEventListener("click", () => {
-       OMAC.SelectionModal.open();
-       this.hide();
+        OMAC.SelectionModal.open();
+        this.hide();
     });
 
     return struc;

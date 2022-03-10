@@ -72,6 +72,15 @@ OMAC.arrayIntersec = (array1, array2) => {
 };
 
 /**
+ * Returns the literal template cleaned of useless spaces
+ * @param {string} literal
+ * @return {string}
+ */
+OMAC.literal = literal => {
+    return literal.replace(/\s+/g, ' ').replace("\\n", "").trim();
+}
+
+/**
  * Adds the params, classes & animations to open modal
  * @param {object} modal
  */

@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 
-mix.copy('src/img','dist/img');
-mix.copy('src/scss','dist/scss');
+mix.copy('src/img', 'dist/img');
+mix.copy('src/scss', 'dist/scss');
 
 mix.sass('src/scss/omacookies.scss', 'css/omacookies.css');
 mix.js('src/js/main.js', 'dist/js/omacookies.js');

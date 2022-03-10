@@ -38,7 +38,7 @@ NoticeBox.buildStructure = function () {
                 </footer>
             </div>
         </div>
-    `.trim();
+    `;
 
     const template = document.createElement('div');
     template.innerHTML = html;

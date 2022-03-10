@@ -57,7 +57,7 @@ SelectionModal.buildStructure = function () {
                 </button>
             </form>
         </div>
-    `.trim();
+    `;
 
     const template = document.createElement("div");
     template.innerHTML = html;
@@ -76,7 +76,7 @@ SelectionModal.buildStructure = function () {
     struc.querySelector('#omacookies-selection-form').addEventListener("submit", (e) => this.handleFormSubmit(e));
 
     let closeBtn = struc.querySelector('#omacookies-close-selection');
-    if(!OMAC.hasResponded) {
+    if (!OMAC.hasResponded) {
         closeBtn.disabled = true;
     }
     closeBtn.addEventListener("click", () => {
@@ -84,7 +84,7 @@ SelectionModal.buildStructure = function () {
         OMAC.QuickLink.show();
     });
 
-    if(!OMAC.hasResponded || !this.isCloseEnabled) {
+    if (!OMAC.hasResponded || !this.isCloseEnabled) {
         closeBtn.disabled = true;
     } else {
         this.enableCloseModalOnBackdropClick(struc);
@@ -120,7 +120,7 @@ SelectionModal.updateCheckboxes = function (checkboxes) {
 }
 
 SelectionModal.updateCheckbox = function (checkbox) {
-    if(OMAC.strContainsAny(OMAC.cookie, ["all", checkbox.value])) {
+    if (OMAC.strContainsAny(OMAC.cookie, ["all", checkbox.value])) {
         return checkbox.checked = true;
     }
 }
@@ -132,7 +132,7 @@ SelectionModal.enableCloseButton = function (button) {
 SelectionModal.enableCloseModalOnBackdropClick = function (modalElement) {
     modalElement.addEventListener("click", (e) => {
         e.stopPropagation();
-        if(e.target.classList.contains("omacookies-backdrop")) {
+        if (e.target.classList.contains("omacookies-backdrop")) {
             this.close();
             OMAC.QuickLink.show();
         }

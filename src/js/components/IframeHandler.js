@@ -8,7 +8,7 @@ class IframeHandler {
     getContentBlockedHtml() {
         return `
             <div class="omacookies-iframe-youtube-content">
-                <img src="dist/img/omacookies-icon.svg" alt="${OMAC.trans.content_blocked_text}">
+                <i class="omacookies-cookie-icon"></i>
                 <h3 class="omacookies-title">${OMAC.trans.content_blocked_title}</h3>
                 <p class="omacookies-text">${OMAC.trans.content_blocked_text}</p>
                 <button id="omacookies-iframe-btn" class="omacookies-btn-secondary">
