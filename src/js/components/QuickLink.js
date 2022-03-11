@@ -20,7 +20,7 @@ QuickLink.buildStructure = function () {
         <button id="${this.elementId}"
             class="omacookies-quick-link ${OMAC.quickLinkPosition} ${this.isShown || OMAC.hasResponded ? '' : 'omacookies-hide'}"
             aria-labelledby="${OMAC.SelectionModal.elementId}">
-            <i class="omacookies-cookie-icon"></i>
+            <i class="omacookies-icon-cookie"></i>
         </button>
     `;
 

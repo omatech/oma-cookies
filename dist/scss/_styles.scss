@@ -3,12 +3,6 @@
     @include rem(font-size, 16px);
 }
 
-i.omacookies-cookie-icon {
-    background-image: url('../img/omacookies-icon.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
 .omacookies-backdrop {
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -187,34 +181,15 @@ i.omacookies-cookie-icon {
 
 .omacookies-close {
     background-color: transparent;
-    @include rem(width, 32px);
-    @include rem(height, 32px);
+    @include rem(font-size, 28px);
+    line-height: 1;
     color: $clr-text;
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.3s ease;
-
-    &:before, &:after {
-        content: "";
-        display: block;
-        @include rem(width, 20px);
-        @include rem(height, 2px);
-        background-color: black;
-        position: absolute;
-        @include rem(left, calc(50% - 10px));
-        top: 50%;
-        transform-origin: center;
-        transform: rotate(45deg);
-    }
-
-    &:after {
-        transform: rotate(-45deg);
-    }
-
     &:hover {
         opacity: 0.6;
     }
-
     &:disabled, &[disabled] {
         pointer-events: none;
         opacity: 0.1;
@@ -256,19 +231,10 @@ i.omacookies-cookie-icon {
         @include rem(padding, 16px);
         text-align: center;
 
-        img {
-            @include rem(width, 84px);
-            @include rem(margin-bottom, 8px);
-            opacity: 0.3;
-            @include media('screen', '<tablet') {
-                display: none;
-            }
-        }
-
-        i.omacookies-cookie-icon {
-            @include rem(width, 84px);
-            @include rem(height, 84px);
-            @include rem(margin-bottom, 8px);
+        .omacookies-icon-cookie {
+            color: $clr-bg;
+            @include rem(font-size, 114px);
+            line-height: 1;
             opacity: 0.3;
             @include media('screen', '<tablet') {
                 display: none;
@@ -330,20 +296,12 @@ i.omacookies-cookie-icon {
         @include rem(left, 12px);
     }
 
-    img {
-        flex: 0 0 auto;
-        height: auto;
-        @include rem(width, 34px);
+    .omacookies-icon-cookie {
+        line-height: 1;
+        @include rem(font-size, 38px);
         @include media('screen', '<tablet') {
-            @include rem(width, 24px);
+            @include rem(font-size, 28px);
         }
-    }
-
-    i.omacookies-cookie-icon {
-        display: block;
-        width: 100%;
-        height: 100%;
-        margin: 8px;
     }
 
     &.bottom-left {
