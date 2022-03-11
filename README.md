@@ -41,7 +41,7 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 <li>
 <a href="#styling">Styling</a>
 <ul>
-<li><a href="using-sass">Override variables using SASS</a></li>
+<li><a href="#using-sass">Override variables using SASS</a></li>
 </ul>
 </li>
 </ol>
@@ -90,6 +90,7 @@ Add the oma-cookies package into your `composer.json` file.
     "omatech/oma-cookies": "dev-master",
 },
 ```
+
 </li>
 <li>
 Install the composer dependencies running in your terminal.
@@ -104,6 +105,7 @@ Import the main js file into your project:
 ```js
 require('/vendor/omatech/oma-cookies/dist/js/omacookies.min.js');
 ```
+
 </li>
 <li>
 
@@ -114,6 +116,7 @@ Import it to your project after the previous require statement.
 require('/vendor/omatech/oma-cookies/dist/js/omacookies.min.js');
 require('path-to-my-project-js/omacookies.config.js');
 ```
+
 </li>
 <li>
 
@@ -128,6 +131,7 @@ In addition, you will have to add the following line to the html meta tags to al
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
+
 </li>
 <li>
 
@@ -139,6 +143,7 @@ Finally, add an empty div with the id `"omacookies"` into your html, right befor
     <div id="omacookies"></div>
 </body>
 ```
+
 </li>
 </ol>
 
@@ -149,6 +154,7 @@ Finally, add an empty div with the id `"omacookies"` into your html, right befor
 * We will specify which type of cookie consent needs to be allowed to block/unblock the content using the `data-omacookies-consent` attribute.
 
 <h4>Youtube videos</h4>
+
 ```html
 <div
     class="omacookies-iframe-youtube"
@@ -158,6 +164,7 @@ Finally, add an empty div with the id `"omacookies"` into your html, right befor
 ```
 
 <h4>Iframe</h4>
+
 ```html
 <div
     class="omacookies-iframe"
@@ -168,6 +175,7 @@ Finally, add an empty div with the id `"omacookies"` into your html, right befor
 ```
 
 <h4>Google Analytics</h4>
+
 It is required to add the `type="text/plain"` attribute.
 
 ```html
@@ -180,6 +188,8 @@ It is required to add the `type="text/plain"` attribute.
 ></div>
 ```
 
+<p align="right"><a href="#top">↑ Back to top</a></p>
+
 <!-- CONFIGURATION -->
 <h2 id="configuration">Configuration</h2>
 
@@ -187,6 +197,7 @@ We will override the default configuration in our `omacookies.config.js` file.
 
 <h3 id="lang-strings">Override language strings</h3>
 We can set a new value for any language string with the following declaration:
+
 ```js
 window.OMAC.available_languages.LOCALE.STRING_KEY = 'New value';
 ```
@@ -196,6 +207,7 @@ For example:
 ```js
 window.OMAC.available_languages.es.select_box_title = 'Personalizar Cookies';
 ```
+
 <h3 id="add-lang">Adding a new language</h3>
 We can add as many languages as we want, we just need to follow the same object structure we already have for ES and EN.
 
@@ -205,7 +217,9 @@ window.OMAC.available_languages.LOCALE = {
     ...
 };
 ```
+
 For example, we will add German language:
+
 ```js
 window.OMAC.available_languages.de = {
     "constent_box_title": "Diese Website verwendet Cookies",
@@ -214,13 +228,17 @@ window.OMAC.available_languages.de = {
 ```
 
 <h3 id="default-lang">Setting the default language</h3>
+
 ```js
 window.OMAC.setLang("LOCALE");
 ```
+
 For example:
+
 ```js
 window.OMAC.setLang("en");
 ```
+
 <h3 id="read-more">Read more link</h3>
 Here we will add the website link where the user will be redirected to read the cookie policy.
 
@@ -229,18 +247,25 @@ For example:
 ```js
 window.OMAC.readMoreLink("https://omatech.com/cookies.html");
 ```
+
 <h3 id="format">Format</h3>
+
 Here we can set the appearance of the initial cookie dialog. The allowed values are `"modal"` (default) or `"banner"`.
+
 ```js
 window.OMAC.format("banner");
 ```
 
 <h3 id="quick-link">Quick link position</h3>
+
 Here we can configure in which corner of the screen will the quick link be located, using the values `"top-right", "top-left", "bottom-right"` or `"bottom-left"`.
 The quick link will appear on the right bottom by default.
+
 ```js
 window.OMAC.quickLinkPosition("bottom-right");
 ```
+
+<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- STYLING -->
 <h2 id="styling">Styling</h2>
@@ -258,8 +283,11 @@ In order to do so, you will have to import the SCSS files of the oma-cookies pro
 @import "vendor/omatech/oma-cookies/dist/scss/styles";
 ```
 
+<p align="right"><a href="#top">↑ Back to top</a></p>
+
 <!-- LICENSE -->
 <h2 id="license">License</h2>
+
 This project has MIT license. For further information, read the `LICENSE` file.
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
