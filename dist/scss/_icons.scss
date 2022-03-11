@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'omacookies-icons';
+    src:  url('../fonts/omacookies-icons.eot?9mcy6a');
+    src:  url('../fonts/omacookies-icons.eot?9mcy6a#iefix') format('embedded-opentype'),
+    url('../fonts/omacookies-icons.ttf?9mcy6a') format('truetype'),
+    url('../fonts/omacookies-icons.woff?9mcy6a') format('woff'),
+    url('../fonts/omacookies-icons.svg?9mcy6a#omacookies-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="omacookies-icon-"], [class*=" omacookies-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'omacookies-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.omacookies-icon-close:before {
+    content: "\e900";
+}
+.omacookies-icon-cookie:before {
+    content: "\e901";
+}

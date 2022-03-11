@@ -54,6 +54,7 @@ SelectionModal.buildStructure = function () {
                 </footer>
                 <button id="omacookies-close-selection" type="button" class="omacookies-close" aria-labelledby="${this.elementId}">
                     <span class="omacookies-visually-hidden">${OMAC.trans.close}</span>
+                    <i class="omacookies-icon-close"></i>
                 </button>
             </form>
         </div>

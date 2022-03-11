@@ -21,6 +21,11 @@
             content: none;
         }
     }
+    button,
+    [type="button"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
     ol, ul {
         list-style: none;
     }
