@@ -12,21 +12,24 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 
 <!-- TABLE OF CONTENTS -->
 <h2>Table of contents</h2>
-<ol>
-<li>
-<a href="#introduction">Introduction</a>
 <ul>
-<li><a href="#how">How does it work?</a></li>
+
+<li>
+<a href="#installation">Installation</a>
+<ul>
+<li><a href="#js-import">JavaScript import</a></li>
+<li><a href="#css-import">CSS/SASS import</a></li>
 </ul>
 </li>
-<li><a href="#built-with">Built with</a></li>
+
 <li>
-<a href="#getting-started">Getting Started</a>
+<a href="#implementation">Implementation</a>
 <ul>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#markup">Markup for the cookie-depending content</a></li>
+<li><a href="#iframes">Iframes</a></li>
+<li><a href="#scripts">Scripts</a></li>
 </ul>
 </li>
+
 <li>
 <a href="#configuration">Configuration</a>
 <ul>
@@ -38,132 +41,106 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 <li><a href="#quick-link">Quick link position</a></li>
 </ul>
 </li>
+
 <li>
-<a href="#styling">Styling</a>
-<ul>
-<li><a href="#using-sass">Override variables using SASS</a></li>
-</ul>
+<a href="#license">License</a>
 </li>
-</ol>
 
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<!-- INTRODUCTION -->
-<h2 id="introduction">Introduction</h2>
-The General Data Protection Regulation (GDPR) applies to all websites with users from the EU. <br>
-Oma-cookies provides control over all cookies and trackings on the website.
-
-<h3 id="how">How does it work?</h3>
-<ul>
-<li><strong>Cookie consent dialog</strong> <br>
-Oma-cookies provides a highly-customizable, user friendly consent advice that will appear everytime a new user visits the website. <br>
-Once the user has made this choice, he will be able to easily change its cookies consent configuration using the "quick link" widget that will appear in a fixed customizable position.
+<li>
+<a href="#contact">Contact</a>
 </li>
-<li><strong>Content blocking</strong> <br>
-Oma-cookies detects all cookies and similar trackers on the website and blocks them until consent is given.
-</li>
+
 </ul>
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<!-- BUILT WITH -->
-<h2 id="built-with">Built With</h2>
-<ul>
-<li><a href="https://www.npmjs.com/">npm</a></li>
-<li><a href="https://webpack.js.org/">Webpack</a></li>
-<li><a href="http://vanilla-js.com/">Vanilla JS</a></li>
-</ul>
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
 
 <!-- GETTING STARTED -->
-<h2 id="getting-started">Getting started</h2>
+<h2 id="installation">Installation</h2>
 
-<h3 id="installation">Installation</h3>
-<ol>
-<li>
+Install the package
 
-Add the oma-cookies package into your `composer.json` file.
-
-```json
-"require": {
-    "omatech/oma-cookies": "dev-master",
-},
+```
+npm i @omatech/oma-cookies
 ```
 
-</li>
-<li>
-Install the composer dependencies running in your terminal.
-
-```sh
-composer install
-```
-</li>
-<li>
+<h3 id="js-import">JavaScript import</h3>
 Import the main js file into your project:
 
 ```js
-require('/vendor/omatech/oma-cookies/dist/js/omacookies.min.js');
+require('@omatech/oma-cookies/dist/js/omacookies.min');
 ```
 
-</li>
-<li>
-
-Create a new .js file called `omacookies.config.js` in order to override the default Oma-cookies configuration.
-Import it to your project after the previous require statement.
-
-```js
-require('/vendor/omatech/oma-cookies/dist/js/omacookies.min.js');
-require('path-to-my-project-js/omacookies.config.js');
-```
-
-</li>
-<li>
-
-Import the stylesheet link in the head of your main html document, before all other stylesheets (for further css customization, visit the [styling section](#styling) below).
+Optionally you can copy into a public folder the JS file located inside
+the ```/node_modules/@omatech/oma-cookies/dist/js``` folder and link it in your HTML layout
 
 ```html
-<link href="path-to-oma-cookies/dist/css/omacookies.css" rel="stylesheet">
+<script src="/path_to_copied_file/omacookies.min.js"></script>
 ```
 
-In addition, you will have to add the following line to the html meta tags to allow the webpage to be responsive.
+<h3 id="css-import">CSS/SASS import</h3>
+*There are 2 approaches depending on your styling method*
+
+**A) If you are *ONLY* overriding CSS classes => Import the compiled CSS file**
+
+```sass
+@import "~@omatech/oma-cookies/dist/css/omacookies.css";
+```
+
+Optionally you can copy into a public folder the CSS file located inside
+the ```/node_modules/@omatech/oma-cookies/dist/css``` folder and link it in your HTML layout
+
+```html
+<link href="/path_to_copied_file/omacookies.css" rel="stylesheet">
+```
+
+**B) If you want to override the variables and CSS classes => Import all the separated files**
+
+```sass
+@import "~@omatech/oma-cookies/dist/scss/base";
+@import "~@omatech/oma-cookies/dist/scss/reset";
+@import "~@omatech/oma-cookies/dist/scss/variables";
+//Your own SCSS file overriding the variables from the file above
+@import "variables";
+@import "~@omatech/oma-cookies/dist/scss/styles";
+```
+
+<h3>Regardless of what option you choose, make sure this line is in your HTML layout so the responsive works
+properly.</h3>
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-</li>
-<li>
-
-Finally, add an empty div with the id `"omacookies"` into your html, right before the body closing tag.
+<h2 id="implementation">IMPLEMENTATION</h2>
+To start things up, you must add this somewhere in your HTML layout (preferably at the end)
 
 ```html
 <body>
-    ...
-    <div id="omacookies"></div>
+...
+<div id="omacookies"></div>
 </body>
 ```
 
-</li>
-</ol>
+<h3 id="iframes">IFRAMES</h3>
 
-<h3 id="markup">Markup for the cookie-dependent content</h3>
+Every iframe must have the attribute ```data-omacookies-consent``` which has 2 possible values ```marketing```
+or ```statistics```. This specitfy when the content will be un/blocked
 
-* The <strong>class for each div type is mandatory</strong> in order to allow the script to work properly.
-
-* We will specify which type of cookie consent needs to be allowed to block/unblock the content using the `data-omacookies-consent` attribute.
-
-<h4>Youtube videos</h4>
+<h4>YouTube videos</h4>
+```data-omacookies-yt-video-id``` is the ID found at the end of every YouTube video URL. In ```/watch?v=uu5k19UaCT0```
+the ID would be ```uu5k19UaCT0```
 
 ```html
 <div
     class="omacookies-iframe-youtube"
     data-omacookies-consent="marketing"
-    data-omacookies-yt-video-id="YOUTUBE_VIDEO_ID"
+    data-omacookies-yt-video-id="uu5k19UaCT0"
 ></div>
 ```
 
-<h4>Iframe</h4>
+<h4>Generic iframe</h4>
+```data-omacookies-src``` would work as the normal iframe ```src``` attribute
+
+You can add any attribute to the rendered iframe using the attribute ```data-omacookies-xxx```. Simply change ```xxx```
+for any other attribute. See the attribute ```width``` shown in the example.
 
 ```html
 <div
@@ -174,18 +151,31 @@ Finally, add an empty div with the id `"omacookies"` into your html, right befor
 ></div>
 ```
 
-<h4>Google Analytics</h4>
+<h3 id="scripts">SCRIPTS</h3>
 
-It is required to add the `type="text/plain"` attribute.
+**It is required to add the `type="text/plain"` attribute.**
+
+* For **file** JavaScript scripts
 
 ```html
-<div
+<script
     class="omacookies-script"
     type="text/plain"
     data-omacookies-consent="statistics"
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=YOUR_GTAG_ID"
-></div>
+    src="https://example.com/"
+></script>
+```
+
+* For **inline** JavaScript code
+
+```html
+<script
+    class="omacookies-script"
+    type="text/plain"
+    data-omacookies-consent="statistics"
+>
+    console.log("Hello World!");
+</script>
 ```
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
@@ -193,7 +183,7 @@ It is required to add the `type="text/plain"` attribute.
 <!-- CONFIGURATION -->
 <h2 id="configuration">Configuration</h2>
 
-We will override the default configuration in our `omacookies.config.js` file.
+Somewhere after the import of the ```omacookies``` JS file we will override attributes from the main object.
 
 <h3 id="lang-strings">Override language strings</h3>
 We can set a new value for any language string with the following declaration:
@@ -211,14 +201,9 @@ window.OMAC.available_languages.es.select_box_title = 'Personalizar Cookies';
 <h3 id="add-lang">Adding a new language</h3>
 We can add as many languages as we want, we just need to follow the same object structure we already have for ES and EN.
 
-```js
-window.OMAC.available_languages.LOCALE = {
-    "STRING_KEY": "New value",
-    ...
-};
-```
+*You can copy the structure from `/node_modules/@omatech/oma-cookies/src/lang/en.json`*
 
-For example, we will add German language:
+**For example, we will add German language:**
 
 ```js
 window.OMAC.available_languages.de = {
@@ -229,11 +214,7 @@ window.OMAC.available_languages.de = {
 
 <h3 id="default-lang">Setting the default language</h3>
 
-```js
-window.OMAC.setLang("LOCALE");
-```
-
-For example:
+Make sure to set the language **after** you make any modifications to the `available_languages` object.
 
 ```js
 window.OMAC.setLang("en");
@@ -242,10 +223,8 @@ window.OMAC.setLang("en");
 <h3 id="read-more">Read more link</h3>
 Here we will add the website link where the user will be redirected to read the cookie policy.
 
-For example:
-
 ```js
-window.OMAC.readMoreLink("https://omatech.com/cookies.html");
+window.OMAC.readMoreLink = "https://omatech.com/cookies.html";
 ```
 
 <h3 id="format">Format</h3>
@@ -253,34 +232,16 @@ window.OMAC.readMoreLink("https://omatech.com/cookies.html");
 Here we can set the appearance of the initial cookie dialog. The allowed values are `"modal"` (default) or `"banner"`.
 
 ```js
-window.OMAC.format("banner");
+window.OMAC.format = "banner";
 ```
 
 <h3 id="quick-link">Quick link position</h3>
 
-Here we can configure in which corner of the screen will the quick link be located, using the values `"top-right", "top-left", "bottom-right"` or `"bottom-left"`.
-The quick link will appear on the right bottom by default.
+Here we can configure in which corner of the screen will the quick link be located, using the values `top-right`
+, `top-left`, `bottom-right` or `bottom-left`. The quick link will appear on the `bottom-right` by default.
 
 ```js
-window.OMAC.quickLinkPosition("bottom-right");
-```
-
-<p align="right"><a href="#top">↑ Back to top</a></p>
-
-<!-- STYLING -->
-<h2 id="styling">Styling</h2>
-
-<h3 id="using-sass">Override variables using SASS</h3>
-Have in mind you will need a SCSS preprocessor running in your project if you want to override the SCSS variables.
-
-In order to do so, you will have to import the SCSS files of the oma-cookies project in the proper order and add your custom `variables-override.scss` stylesheet right after the package `_variables.scss` file.
-
-```scss
-@import "vendor/omatech/oma-cookies/dist/scss/base";
-@import "vendor/omatech/oma-cookies/dist/scss/reset";
-@import "vendor/omatech/oma-cookies/dist/scss/variables";
-@import "variables-override"; // your custom variables stylesheet
-@import "vendor/omatech/oma-cookies/dist/scss/styles";
+window.OMAC.quickLinkPosition = "bottom-left";
 ```
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
