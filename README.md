@@ -61,6 +61,7 @@ npm i @omatech/oma-cookies
 ```
 
 <h3 id="js-import">JavaScript import</h3>
+
 Import the main js file into your project:
 
 ```js
@@ -75,7 +76,8 @@ the `/node_modules/@omatech/oma-cookies/dist/js` folder and link it in your HTML
 ```
 
 <h3 id="css-import">CSS/SASS import</h3>
-*There are 2 approaches depending on your styling method*
+
+There are 2 approaches depending on your styling method:
 
 **A) If you are *ONLY* overriding CSS classes => Import the compiled CSS file**
 
@@ -109,6 +111,7 @@ properly.</h3>
 ```
 
 <h2 id="implementation">Implementation</h2>
+
 To start things up, you must add this somewhere in your HTML layout (preferably at the end)
 
 ```html
@@ -124,6 +127,7 @@ Every iframe must have the attribute `data-omacookies-consent` which has 2 possi
 or `statistics`. This specitfy when the content will be un/blocked
 
 <h4>YouTube videos</h4>
+
 The attribute `data-omacookies-yt-video-id` is the ID found at the end of every YouTube video URL. In `/watch?v=uu5k19UaCT0`
 the ID would be `uu5k19UaCT0`
 
@@ -136,6 +140,7 @@ the ID would be `uu5k19UaCT0`
 ```
 
 <h4>Generic iframe</h4>
+
 The attribute `data-omacookies-src` would work as the normal iframe `src` attribute
 
 You can add any attribute to the rendered iframe using the attribute `data-omacookies-xxx`. Simply change `xxx`
@@ -185,6 +190,7 @@ for any other attribute. See the attribute `width` shown in the example.
 Somewhere after the import of the `omacookies` JS file we will override attributes from the main object.
 
 <h3 id="lang-strings">Override language strings</h3>
+
 We can set a new value for any language string with the following declaration:
 
 ```js
@@ -192,6 +198,7 @@ window.OMAC.available_languages.es.select_box_title = 'Personalizar Cookies';
 ```
 
 <h3 id="add-lang">Adding a new language</h3>
+
 We can add as many languages as we want, we just need to follow the same object structure we already have for ES and EN.
 
 You can copy the structure from `/node_modules/@omatech/oma-cookies/src/lang/en.json`
@@ -214,6 +221,7 @@ window.OMAC.setLang("en");
 ```
 
 <h3 id="read-more">Read more link</h3>
+
 Here we will add the website link where the user will be redirected to read the cookie policy.
 
 ```js
@@ -239,14 +247,12 @@ window.OMAC.quickLinkPosition = "bottom-left";
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
 
-<!-- LICENSE -->
 <h2 id="license">License</h2>
 
 This project has MIT license. For further information, read the `LICENSE` file.
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
 
-<!-- CONTACT -->
 <h2 id="contact">Contact</h2>
 
 <ul>
