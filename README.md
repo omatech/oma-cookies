@@ -52,7 +52,6 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 
 </ul>
 
-<!-- GETTING STARTED -->
 <h2 id="installation">Installation</h2>
 
 Install the package
@@ -69,7 +68,7 @@ require('@omatech/oma-cookies/dist/js/omacookies.min');
 ```
 
 Optionally you can copy into a public folder the JS file located inside
-the ```/node_modules/@omatech/oma-cookies/dist/js``` folder and link it in your HTML layout
+the `/node_modules/@omatech/oma-cookies/dist/js` folder and link it in your HTML layout
 
 ```html
 <script src="/path_to_copied_file/omacookies.min.js"></script>
@@ -81,11 +80,11 @@ the ```/node_modules/@omatech/oma-cookies/dist/js``` folder and link it in your 
 **A) If you are *ONLY* overriding CSS classes => Import the compiled CSS file**
 
 ```sass
-@import "~@omatech/oma-cookies/dist/css/omacookies.css";
+@import "~@omatech/oma-cookies/dist/css/omacookies.css"
 ```
 
 Optionally you can copy into a public folder the CSS file located inside
-the ```/node_modules/@omatech/oma-cookies/dist/css``` folder and link it in your HTML layout
+the `/node_modules/@omatech/oma-cookies/dist/css` folder and link it in your HTML layout
 
 ```html
 <link href="/path_to_copied_file/omacookies.css" rel="stylesheet">
@@ -94,12 +93,12 @@ the ```/node_modules/@omatech/oma-cookies/dist/css``` folder and link it in your
 **B) If you want to override the variables and CSS classes => Import all the separated files**
 
 ```sass
-@import "~@omatech/oma-cookies/dist/scss/base";
-@import "~@omatech/oma-cookies/dist/scss/reset";
-@import "~@omatech/oma-cookies/dist/scss/variables";
+@import "~@omatech/oma-cookies/dist/scss/base"
+@import "~@omatech/oma-cookies/dist/scss/reset"
+@import "~@omatech/oma-cookies/dist/scss/variables"
 //Your own SCSS file overriding the variables from the file above
-@import "variables";
-@import "~@omatech/oma-cookies/dist/scss/styles";
+@import "variables"
+@import "~@omatech/oma-cookies/dist/scss/styles"
 ```
 
 <h3>Regardless of what option you choose, make sure this line is in your HTML layout so the responsive works
@@ -109,7 +108,7 @@ properly.</h3>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-<h2 id="implementation">IMPLEMENTATION</h2>
+<h2 id="implementation">Implementation</h2>
 To start things up, you must add this somewhere in your HTML layout (preferably at the end)
 
 ```html
@@ -119,14 +118,14 @@ To start things up, you must add this somewhere in your HTML layout (preferably 
 </body>
 ```
 
-<h3 id="iframes">IFRAMES</h3>
+<h3 id="iframes">Iframes</h3>
 
-Every iframe must have the attribute ```data-omacookies-consent``` which has 2 possible values ```marketing```
-or ```statistics```. This specitfy when the content will be un/blocked
+Every iframe must have the attribute `data-omacookies-consent` which has 2 possible values `marketing`
+or `statistics`. This specitfy when the content will be un/blocked
 
 <h4>YouTube videos</h4>
-```data-omacookies-yt-video-id``` is the ID found at the end of every YouTube video URL. In ```/watch?v=uu5k19UaCT0```
-the ID would be ```uu5k19UaCT0```
+The attribute `data-omacookies-yt-video-id` is the ID found at the end of every YouTube video URL. In `/watch?v=uu5k19UaCT0`
+the ID would be `uu5k19UaCT0`
 
 ```html
 <div
@@ -137,10 +136,10 @@ the ID would be ```uu5k19UaCT0```
 ```
 
 <h4>Generic iframe</h4>
-```data-omacookies-src``` would work as the normal iframe ```src``` attribute
+The attribute `data-omacookies-src` would work as the normal iframe `src` attribute
 
-You can add any attribute to the rendered iframe using the attribute ```data-omacookies-xxx```. Simply change ```xxx```
-for any other attribute. See the attribute ```width``` shown in the example.
+You can add any attribute to the rendered iframe using the attribute `data-omacookies-xxx`. Simply change `xxx`
+for any other attribute. See the attribute `width` shown in the example.
 
 ```html
 <div
@@ -151,7 +150,7 @@ for any other attribute. See the attribute ```width``` shown in the example.
 ></div>
 ```
 
-<h3 id="scripts">SCRIPTS</h3>
+<h3 id="scripts">Scripts</h3>
 
 **It is required to add the `type="text/plain"` attribute.**
 
@@ -183,16 +182,10 @@ for any other attribute. See the attribute ```width``` shown in the example.
 <!-- CONFIGURATION -->
 <h2 id="configuration">Configuration</h2>
 
-Somewhere after the import of the ```omacookies``` JS file we will override attributes from the main object.
+Somewhere after the import of the `omacookies` JS file we will override attributes from the main object.
 
 <h3 id="lang-strings">Override language strings</h3>
 We can set a new value for any language string with the following declaration:
-
-```js
-window.OMAC.available_languages.LOCALE.STRING_KEY = 'New value';
-```
-
-For example:
 
 ```js
 window.OMAC.available_languages.es.select_box_title = 'Personalizar Cookies';
@@ -201,9 +194,9 @@ window.OMAC.available_languages.es.select_box_title = 'Personalizar Cookies';
 <h3 id="add-lang">Adding a new language</h3>
 We can add as many languages as we want, we just need to follow the same object structure we already have for ES and EN.
 
-*You can copy the structure from `/node_modules/@omatech/oma-cookies/src/lang/en.json`*
+You can copy the structure from `/node_modules/@omatech/oma-cookies/src/lang/en.json`
 
-**For example, we will add German language:**
+For example, we will add German language:
 
 ```js
 window.OMAC.available_languages.de = {
@@ -229,7 +222,7 @@ window.OMAC.readMoreLink = "https://omatech.com/cookies.html";
 
 <h3 id="format">Format</h3>
 
-Here we can set the appearance of the initial cookie dialog. The allowed values are `"modal"` (default) or `"banner"`.
+Here we can set the appearance of the initial cookie dialog. The allowed values are `modal` (default) or `banner`.
 
 ```js
 window.OMAC.format = "banner";
