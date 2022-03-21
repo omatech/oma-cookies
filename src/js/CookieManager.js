@@ -1,4 +1,4 @@
-window.addEventListener("load", () => OMAC.updateConsent());
+window.addEventListener("load", OMAC.delayedLoad(OMAC.updateConsent));
 window.addEventListener('update-consent-config', e => OMAC.updateConsent(e.detail));
 
 /**

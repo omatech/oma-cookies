@@ -103,3 +103,7 @@ OMAC.closeModal = (modal) => {
     }, 300);
     this.isOpen = false;
 }
+
+OMAC.delayedLoad = function (callback) {
+    setTimeout(callback, this.loadDelay);
+}
