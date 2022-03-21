@@ -1,6 +1,6 @@
 {
     "name": "@omatech/oma-cookies",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Cookies consent manager",
     "scope": "omatech",
     "scripts": {
