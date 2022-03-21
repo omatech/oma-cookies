@@ -294,7 +294,7 @@
   display: none !important;
 }
 
-.omacookies-iframe-youtube {
+.omacookies-iframe, .omacookies-iframe-youtube {
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
@@ -304,14 +304,14 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-.omacookies-iframe-youtube iframe {
+.omacookies-iframe iframe, .omacookies-iframe-youtube iframe {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.omacookies-iframe-youtube-content {
+.omacookies-iframe-content, .omacookies-iframe-youtube-content {
   position: absolute;
   left: 0;
   top: 0;
@@ -324,18 +324,18 @@
   padding: 1rem;
   text-align: center;
 }
-.omacookies-iframe-youtube-content .omacookies-icon-cookie {
+.omacookies-iframe-content .omacookies-icon-cookie, .omacookies-iframe-youtube-content .omacookies-icon-cookie {
   color: #fff;
   font-size: 7.125rem;
   line-height: 1;
   opacity: 0.3;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-iframe-youtube-content .omacookies-icon-cookie {
+  .omacookies-iframe-content .omacookies-icon-cookie, .omacookies-iframe-youtube-content .omacookies-icon-cookie {
     display: none;
   }
 }
-.omacookies-iframe-youtube-content .omacookies-title {
+.omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
   font-weight: normal;
   max-width: 17.5rem;
   font-size: 1.5rem;
@@ -343,26 +343,26 @@
   line-height: 1.4;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-iframe-youtube-content .omacookies-title {
+  .omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
     font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 374px) {
-  .omacookies-iframe-youtube-content .omacookies-title {
+  .omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
     display: none;
   }
 }
-.omacookies-iframe-youtube-content .omacookies-text {
+.omacookies-iframe-content .omacookies-text, .omacookies-iframe-youtube-content .omacookies-text {
   font-size: 0.75rem;
   max-width: 17.5rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 375px) {
-  .omacookies-iframe-youtube-content .omacookies-text {
+  .omacookies-iframe-content .omacookies-text, .omacookies-iframe-youtube-content .omacookies-text {
     font-size: 0.875rem;
   }
 }
-.omacookies-iframe-youtube-content .omacookies-btn-secondary {
+.omacookies-iframe-content .omacookies-btn-secondary, .omacookies-iframe-youtube-content .omacookies-btn-secondary {
   width: 13.75rem;
 }
 

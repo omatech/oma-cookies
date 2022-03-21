@@ -17,7 +17,7 @@ window.addEventListener("load",function(){return OMAC.updateConsent()});window.a
   \************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var setReadOnlyProperty=function setReadOnlyProperty(obj,propName,propValue){Object.defineProperty(obj,propName,{value:propValue,writable:false})};var OMACookies={cookie:null,hasResponded:false,consent:{all:false,statistics:false,marketing:false},available_languages:{es:__webpack_require__(/*! ../lang/es.json */ "./src/lang/es.json"),en:__webpack_require__(/*! ../lang/en.json */ "./src/lang/en.json")},lang:"",trans:{},readMoreLink:"#",elementId:"omacookies",format:"modal",quickLinkPosition:"bottom-right"};setReadOnlyProperty(OMACookies,"consentUpdatedEvent",new Event("consent-updated"));setReadOnlyProperty(OMACookies,"openConsentBoxEvent",new Event("open-consent-box"));setReadOnlyProperty(OMACookies,"consentTypes",["statistics","marketing"]);OMACookies.setLang=function(lang){this.lang=lang;this.trans=this.available_languages[lang]};module.exports=OMACookies;
+var setReadOnlyProperty=function setReadOnlyProperty(obj,propName,propValue){Object.defineProperty(obj,propName,{value:propValue,writable:false})};var OMACookies={cookie:null,hasResponded:false,consent:{all:false,statistics:false,marketing:false},available_languages:{es:__webpack_require__(/*! ../lang/es.json */ "./src/lang/es.json"),en:__webpack_require__(/*! ../lang/en.json */ "./src/lang/en.json")},lang:"",trans:{},readMoreLink:"#",elementId:"omacookies",format:"modal",quickLinkPosition:"bottom-right",loadDelay:3000};setReadOnlyProperty(OMACookies,"consentUpdatedEvent",new Event("consent-updated"));setReadOnlyProperty(OMACookies,"openConsentBoxEvent",new Event("open-consent-box"));setReadOnlyProperty(OMACookies,"consentTypes",["statistics","marketing"]);OMACookies.setLang=function(lang){this.lang=lang;this.trans=this.available_languages[lang]};module.exports=OMACookies;
 
 /***/ }),
 
@@ -105,7 +105,7 @@ function _typeof(obj){"@babel/helpers - typeof";return _typeof="function"==typeo
   \************************/
 /***/ (() => {
 
-window.addEventListener("load",function(){var elem=document.getElementById(OMAC.elementId);elem.classList.add("omacookies");elem.innerHTML="";elem.append(OMAC.NoticeBox.init());elem.append(OMAC.SelectionModal.init());elem.append(OMAC.QuickLink.init())});
+window.addEventListener("load",function(){setTimeout(function(){var elem=document.getElementById(OMAC.elementId);elem.classList.add("omacookies");elem.innerHTML="";elem.append(OMAC.NoticeBox.init());elem.append(OMAC.SelectionModal.init());elem.append(OMAC.QuickLink.init())},OMAC.loadDelay)});
 
 /***/ }),
 
@@ -315,7 +315,7 @@ module.exports = JSON.parse('{"consent_box_title":"Esta página web usa cookies"
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkoma_cookies"] = self["webpackChunkoma_cookies"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunk_omatech_oma_cookies"] = self["webpackChunk_omatech_oma_cookies"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
