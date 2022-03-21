@@ -7,7 +7,7 @@
   font-style: normal;
   font-display: block;
 }
-[class^=omacookies-icon-], [class*=" omacookies-icon-"] {
+[class^=omac-icon-], [class*=" omac-icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "omacookies-icons" !important;
   speak: never;
@@ -21,15 +21,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.omacookies-icon-close:before {
+.omac-icon-close:before {
   content: "\e900";
 }
 
-.omacookies-icon-cookie:before {
+.omac-icon-cookie:before {
   content: "\e901";
 }
 
-[class^=omacookies] {
+[class^=omac] {
   color: inherit;
   margin: 0;
   padding: 0;
@@ -41,29 +41,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-[class^=omacookies] article, [class^=omacookies] aside, [class^=omacookies] details, [class^=omacookies] figcaption, [class^=omacookies] figure, [class^=omacookies] header, [class^=omacookies] hgroup, [class^=omacookies] menu, [class^=omacookies] nav, [class^=omacookies] section {
+[class^=omac] article, [class^=omac] aside, [class^=omac] details, [class^=omac] figcaption, [class^=omac] figure, [class^=omac] header, [class^=omac] hgroup, [class^=omac] menu, [class^=omac] nav, [class^=omac] section {
   display: block;
 }
-[class^=omacookies] blockquote, [class^=omacookies] q {
+[class^=omac] blockquote, [class^=omac] q {
   quotes: none;
 }
-[class^=omacookies] blockquote:before, [class^=omacookies] blockquote:after {
+[class^=omac] blockquote:before, [class^=omac] blockquote:after {
   content: "";
   content: none;
 }
-[class^=omacookies] button,
-[class^=omacookies] [type=button] {
+[class^=omac] button,
+[class^=omac] [type=button] {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-[class^=omacookies] ol, [class^=omacookies] ul {
+[class^=omac] ol, [class^=omac] ul {
   list-style: none;
 }
-[class^=omacookies] q:before, [class^=omacookies] q:after {
+[class^=omac] q:before, [class^=omac] q:after {
   content: "";
   content: none;
 }
-[class^=omacookies] table {
+[class^=omac] table {
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -73,7 +73,7 @@
   font-size: 1rem;
 }
 
-.omacookies-backdrop {
+.omac-backdrop {
   opacity: 0;
   transition: opacity 0.3s ease;
   position: fixed;
@@ -90,24 +90,24 @@
   padding: 1rem;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-backdrop {
+  .omac-backdrop {
     padding: 0.75rem;
   }
 }
-.omacookies-backdrop.fade-in {
+.omac-backdrop.fade-in {
   opacity: 1;
 }
 
-.omacookies-banner.omacookies-box {
+.omac-banner.omac-box {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   text-align: center;
 }
-.omacookies-banner.omacookies-box .omacookies-box-header,
-.omacookies-banner.omacookies-box .omacookies-box-body,
-.omacookies-banner.omacookies-box .omacookies-box-footer {
+.omac-banner.omac-box .omac-box-header,
+.omac-banner.omac-box .omac-box-body,
+.omac-banner.omac-box .omac-box-footer {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -116,37 +116,37 @@
   max-width: 33.75rem;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-banner.omacookies-box .omacookies-box-header,
-.omacookies-banner.omacookies-box .omacookies-box-body,
-.omacookies-banner.omacookies-box .omacookies-box-footer {
+  .omac-banner.omac-box .omac-box-header,
+.omac-banner.omac-box .omac-box-body,
+.omac-banner.omac-box .omac-box-footer {
     max-width: 45rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .omacookies-banner.omacookies-box .omacookies-box-header,
-.omacookies-banner.omacookies-box .omacookies-box-body,
-.omacookies-banner.omacookies-box .omacookies-box-footer {
+  .omac-banner.omac-box .omac-box-header,
+.omac-banner.omac-box .omac-box-body,
+.omac-banner.omac-box .omac-box-footer {
     max-width: 60rem;
   }
 }
-.omacookies-banner.omacookies-box .omacookies-box-body {
+.omac-banner.omac-box .omac-box-body {
   position: relative;
   overflow-y: initial;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-banner.omacookies-box .omacookies-box-body {
+  .omac-banner.omac-box .omac-box-body {
     padding-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .omacookies-banner.omacookies-box .omacookies-read-more {
+  .omac-banner.omac-box .omac-read-more {
     position: absolute;
     left: 1rem;
     bottom: -3rem;
   }
 }
 
-.omacookies-box {
+.omac-box {
   background-color: #fff;
   width: 100%;
   display: flex;
@@ -155,93 +155,93 @@
   justify-content: flex-start;
   position: relative;
 }
-.omacookies-box .omacookies-close {
+.omac-box .omac-close {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   z-index: 2;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-box .omacookies-close {
+  .omac-box .omac-close {
     top: 1rem;
     right: 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .omacookies-box .omacookies-close {
+  .omac-box .omac-close {
     top: 1.25rem;
     right: 1.25rem;
   }
 }
-.omacookies-box-header {
+.omac-box-header {
   padding: 1rem 2.75rem 1rem 1rem;
   flex: 0 0 auto;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-box-header {
+  .omac-box-header {
     padding: 2rem 3.625rem 0.75rem 2.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .omacookies-box-header {
+  .omac-box-header {
     padding: 3.375rem 5rem 0.5rem;
   }
 }
-.omacookies-box-body {
+.omac-box-body {
   flex: 1 1 auto;
   overflow-y: auto;
   padding: 0 1rem 1rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-box-body {
+  .omac-box-body {
     padding: 0.75rem 2.5rem 0.75rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .omacookies-box-body {
+  .omac-box-body {
     padding: 0.5rem 5rem 1.5rem;
   }
 }
-.omacookies-box-footer {
+.omac-box-footer {
   display: flex;
   align-items: center;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-box-footer {
+  .omac-box-footer {
     padding: 0 1rem 1rem;
     flex-direction: column;
     justify-content: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
-  .omacookies-box-footer {
+  .omac-box-footer {
     padding: 0.75rem 2.5rem 2rem;
     flex-direction: row;
     justify-content: flex-end;
   }
 }
 @media screen and (min-width: 1024px) {
-  .omacookies-box-footer {
+  .omac-box-footer {
     padding: 0.75rem 5rem 3.125rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .omacookies-box-footer [class^=omacookies-btn] {
+  .omac-box-footer [class^=omac-btn] {
     width: 100%;
     margin-top: 0.5rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .omacookies-box-footer [class^=omacookies-btn] {
+  .omac-box-footer [class^=omac-btn] {
     margin-left: 1rem;
   }
 }
 
-.omacookies-btn-primary,
-.omacookies-btn-secondary {
+.omac-btn-primary,
+.omac-btn-secondary {
   font-weight: 700;
   cursor: pointer;
   font-size: 0.875rem;
@@ -255,25 +255,25 @@
   border-radius: 6px;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-btn-primary,
-.omacookies-btn-secondary {
+  .omac-btn-primary,
+.omac-btn-secondary {
     height: 2.625rem;
     font-size: 0.9375rem;
   }
 }
 
-.omacookies-btn-primary {
+.omac-btn-primary {
   background-color: #01d595;
   color: #fff;
 }
 
-.omacookies-btn-secondary {
+.omac-btn-secondary {
   color: #01d595;
   background-color: transparent;
   border: 1px solid #01d595;
 }
 
-.omacookies-close {
+.omac-close {
   background-color: transparent;
   font-size: 1.75rem;
   line-height: 1;
@@ -282,19 +282,19 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.omacookies-close:hover {
+.omac-close:hover {
   opacity: 0.6;
 }
-.omacookies-close:disabled, .omacookies-close[disabled] {
+.omac-close:disabled, .omac-close[disabled] {
   pointer-events: none;
   opacity: 0.1;
 }
 
-.omacookies-hide {
+.omac-hide {
   display: none !important;
 }
 
-.omacookies-iframe, .omacookies-iframe-youtube {
+.omac-iframe, .omac-iframe-youtube {
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
@@ -304,14 +304,14 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-.omacookies-iframe iframe, .omacookies-iframe-youtube iframe {
+.omac-iframe iframe, .omac-iframe-youtube iframe {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
 }
-.omacookies-iframe-content, .omacookies-iframe-youtube-content {
+.omac-iframe-content, .omac-iframe-youtube-content {
   position: absolute;
   left: 0;
   top: 0;
@@ -324,18 +324,18 @@
   padding: 1rem;
   text-align: center;
 }
-.omacookies-iframe-content .omacookies-icon-cookie, .omacookies-iframe-youtube-content .omacookies-icon-cookie {
+.omac-iframe-content .omac-icon-cookie, .omac-iframe-youtube-content .omac-icon-cookie {
   color: #fff;
   font-size: 7.125rem;
   line-height: 1;
   opacity: 0.3;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-iframe-content .omacookies-icon-cookie, .omacookies-iframe-youtube-content .omacookies-icon-cookie {
+  .omac-iframe-content .omac-icon-cookie, .omac-iframe-youtube-content .omac-icon-cookie {
     display: none;
   }
 }
-.omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
+.omac-iframe-content .omac-title, .omac-iframe-youtube-content .omac-title {
   font-weight: normal;
   max-width: 17.5rem;
   font-size: 1.5rem;
@@ -343,30 +343,30 @@
   line-height: 1.4;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
+  .omac-iframe-content .omac-title, .omac-iframe-youtube-content .omac-title {
     font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 374px) {
-  .omacookies-iframe-content .omacookies-title, .omacookies-iframe-youtube-content .omacookies-title {
+  .omac-iframe-content .omac-title, .omac-iframe-youtube-content .omac-title {
     display: none;
   }
 }
-.omacookies-iframe-content .omacookies-text, .omacookies-iframe-youtube-content .omacookies-text {
+.omac-iframe-content .omac-text, .omac-iframe-youtube-content .omac-text {
   font-size: 0.75rem;
   max-width: 17.5rem;
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 375px) {
-  .omacookies-iframe-content .omacookies-text, .omacookies-iframe-youtube-content .omacookies-text {
+  .omac-iframe-content .omac-text, .omac-iframe-youtube-content .omac-text {
     font-size: 0.875rem;
   }
 }
-.omacookies-iframe-content .omacookies-btn-secondary, .omacookies-iframe-youtube-content .omacookies-btn-secondary {
+.omac-iframe-content .omac-btn-secondary, .omac-iframe-youtube-content .omac-btn-secondary {
   width: 13.75rem;
 }
 
-.omacookies-quick-link {
+.omac-quick-link {
   position: fixed;
   z-index: 9999;
   display: flex;
@@ -385,7 +385,7 @@
   left: 1.5rem;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-quick-link {
+  .omac-quick-link {
     width: 2.375rem;
     height: 2.375rem;
     top: 0.75rem;
@@ -394,39 +394,39 @@
     left: 0.75rem;
   }
 }
-.omacookies-quick-link .omacookies-icon-cookie {
+.omac-quick-link .omac-icon-cookie {
   line-height: 1;
   font-size: 2.375rem;
 }
 @media screen and (max-width: 767px) {
-  .omacookies-quick-link .omacookies-icon-cookie {
+  .omac-quick-link .omac-icon-cookie {
     font-size: 1.75rem;
   }
 }
-.omacookies-quick-link.bottom-left {
+.omac-quick-link.bottom-left {
   top: auto;
   right: auto;
 }
-.omacookies-quick-link.top-left {
+.omac-quick-link.top-left {
   bottom: auto;
   right: auto;
 }
-.omacookies-quick-link.bottom-right {
+.omac-quick-link.bottom-right {
   top: auto;
   left: auto;
 }
-.omacookies-quick-link.top-right {
+.omac-quick-link.top-right {
   bottom: auto;
   left: auto;
 }
 
-.omacookies-modal {
+.omac-modal {
   max-width: 48.75rem;
   max-height: 100%;
   flex: 0 0 auto;
 }
 
-.omacookies-read-more {
+.omac-read-more {
   display: inline-block;
   color: #b862ed;
   font-weight: 700;
@@ -435,7 +435,7 @@
   text-decoration: underline;
 }
 
-.omacookies-switch-group {
+.omac-switch-group {
   border-bottom: 1px solid #DEDEDE;
   display: flex;
   flex-direction: row;
@@ -444,14 +444,14 @@
   padding: 0.75rem 0;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-switch-group {
+  .omac-switch-group {
     padding: 1.5rem 1rem 1.5rem 0;
   }
 }
-.omacookies-switch-group input {
+.omac-switch-group input {
   display: none;
 }
-.omacookies-switch-group .omacookies-switch-text {
+.omac-switch-group .omac-switch-text {
   font-size: 0.875rem;
   flex: 1 1 auto;
   line-height: 1.6;
@@ -459,11 +459,11 @@
   font-weight: 500;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-switch-group .omacookies-switch-text {
+  .omac-switch-group .omac-switch-text {
     font-size: 1rem;
   }
 }
-.omacookies-switch-group .omacookies-switch {
+.omac-switch-group .omac-switch {
   flex: 0 0 auto;
   margin-left: 1rem;
   cursor: pointer;
@@ -474,7 +474,7 @@
   position: relative;
   transition: all 0.3s ease;
 }
-.omacookies-switch-group .omacookies-switch:after {
+.omac-switch-group .omac-switch:after {
   content: "";
   display: block;
   width: 1.25rem;
@@ -486,35 +486,35 @@
   background-color: #fff;
   transition: inherit;
 }
-.omacookies-switch-group input:checked + .omacookies-switch {
+.omac-switch-group input:checked + .omac-switch {
   background-color: #01d595;
 }
-.omacookies-switch-group input:checked + .omacookies-switch:after {
+.omac-switch-group input:checked + .omac-switch:after {
   left: 1.25rem;
 }
-.omacookies-switch-group input:disabled + .omacookies-switch {
+.omac-switch-group input:disabled + .omac-switch {
   opacity: 0.3;
   cursor: default;
 }
 
-.omacookies-title {
+.omac-title {
   font-size: 0.9375rem;
   line-height: 1.8;
   font-weight: 700;
 }
 @media screen and (min-width: 768px) {
-  .omacookies-title {
+  .omac-title {
     font-size: 1.125rem;
   }
 }
 
-.omacookies-text {
+.omac-text {
   font-size: 0.875rem;
   line-height: 1.8;
   margin-bottom: 0.5rem;
 }
 
-.omacookies-visually-hidden {
+.omac-visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;

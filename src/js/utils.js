@@ -85,7 +85,7 @@ OMAC.literal = literal => {
  * @param {object} modal
  */
 OMAC.openModal = (modal) => {
-    modal.element.classList.remove("omacookies-hide");
+    modal.element.classList.remove("omac-hide");
     setTimeout(() => {
         modal.element.classList.add("fade-in");
     }, 300);
@@ -99,11 +99,11 @@ OMAC.openModal = (modal) => {
 OMAC.closeModal = (modal) => {
     modal.element.classList.remove("fade-in");
     setTimeout(() => {
-        modal.element.classList.add("omacookies-hide");
+        modal.element.classList.add("omac-hide");
     }, 300);
     this.isOpen = false;
 }
 
-OMAC.delayedLoad = function (callback) {
-    setTimeout(callback, this.loadDelay);
+OMAC.delayedLoad = function (callback, addDelay = 0) {
+    setTimeout(callback, this.loadDelay + addDelay);
 }

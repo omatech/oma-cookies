@@ -1,5 +1,5 @@
 const SelectionModal = {
-    elementId: "omacookies-selection-box",
+    elementId: "omac-selection-box",
     element: null,
     initialized: false,
     isOpen: false,
@@ -20,41 +20,41 @@ SelectionModal.enableClose = function () {
 
 SelectionModal.buildStructure = function () {
     const html = `
-        <div id="${this.elementId}" class="omacookies-backdrop ${this.isOpen ? '' : 'omacookies-hide'}">
-            <form class="omacookies-selection omacookies-box omacookies-modal" id="omacookies-selection-form">
-                <header class="omacookies-box-header">
-                    <h3 class="omacookies-title">${OMAC.trans.select_box_title}</h3>
+        <div id="${this.elementId}" class="omac-backdrop ${this.isOpen ? '' : 'omac-hide'}">
+            <form class="omac-selection omac-box omac-modal" id="omac-selection-form">
+                <header class="omac-box-header">
+                    <h3 class="omac-title">${OMAC.trans.select_box_title}</h3>
                 </header>
-                <div class="omacookies-box-body">
-                    <p class="omacookies-text">${OMAC.trans.select_box_description}</p>
-                    <a href="${OMAC.readMoreLink}" target="_blank" class="omacookies-read-more"
+                <div class="omac-box-body">
+                    <p class="omac-text">${OMAC.trans.select_box_description}</p>
+                    <a href="${OMAC.readMoreLink}" target="_blank" class="omac-read-more"
                         aria-label="${OMAC.trans.read_more_label}">
                         ${OMAC.trans.read_more}</a>
-                    <div class="omacookies-switch-list">
-                        <label class="omacookies-switch-group">
-                            <span class="omacookies-switch-text">${OMAC.trans.select_mandatory_title}</span>
+                    <div class="omac-switch-list">
+                        <label class="omac-switch-group">
+                            <span class="omac-switch-text">${OMAC.trans.select_mandatory_title}</span>
                             <input type="checkbox" disabled checked />
-                            <span class="omacookies-switch"></span>
+                            <span class="omac-switch"></span>
                         </label>
-                        <label class="omacookies-switch-group" for="switch-statistics">
-                            <span class="omacookies-switch-text">${OMAC.trans.select_statistics_title}</span>
+                        <label class="omac-switch-group" for="switch-statistics">
+                            <span class="omac-switch-text">${OMAC.trans.select_statistics_title}</span>
                             <input id="switch-statistics" type="checkbox" value="statistics" name="omacookies_consent" />
-                            <span class="omacookies-switch"></span>
+                            <span class="omac-switch"></span>
                         </label>
-                        <label class="omacookies-switch-group" for="switch-marketing">
-                            <span class="omacookies-switch-text">${OMAC.trans.select_marketing_title}</span>
+                        <label class="omac-switch-group" for="switch-marketing">
+                            <span class="omac-switch-text">${OMAC.trans.select_marketing_title}</span>
                             <input id="switch-marketing" type="checkbox" value="marketing" name="omacookies_consent" />
-                            <span class="omacookies-switch"></span>
+                            <span class="omac-switch"></span>
                         </label>
                     </div>
                 </div>
-                <footer class="omacookies-box-footer">
-                    <button id="omacookies-select-all-btn" type="button" class="omacookies-btn-secondary">${OMAC.trans.select_all_btn}</button>
-                    <button id="omacookies-accept-selection-btn" type="submit"  class="omacookies-btn-primary">${OMAC.trans.accept_selection_btn}</button>
+                <footer class="omac-box-footer">
+                    <button id="omac-select-all-btn" type="button" class="omac-btn-secondary">${OMAC.trans.select_all_btn}</button>
+                    <button id="omac-accept-selection-btn" type="submit"  class="omac-btn-primary">${OMAC.trans.accept_selection_btn}</button>
                 </footer>
-                <button id="omacookies-close-selection" type="button" class="omacookies-close" aria-labelledby="${this.elementId}">
-                    <span class="omacookies-visually-hidden">${OMAC.trans.close}</span>
-                    <i class="omacookies-icon-close"></i>
+                <button id="omac-close-selection" type="button" class="omac-close" aria-labelledby="${this.elementId}">
+                    <span class="omac-visually-hidden">${OMAC.trans.close}</span>
+                    <i class="omac-icon-close"></i>
                 </button>
             </form>
         </div>
@@ -68,15 +68,15 @@ SelectionModal.buildStructure = function () {
     let checkboxes = struc.querySelectorAll("[name='omacookies_consent']");
     this.updateCheckboxes(checkboxes);
 
-    struc.querySelector('#omacookies-select-all-btn').addEventListener("click", () => {
+    struc.querySelector('#omac-select-all-btn').addEventListener("click", () => {
         checkboxes.forEach(checkbox => {
             checkbox.checked = true;
         });
     });
 
-    struc.querySelector('#omacookies-selection-form').addEventListener("submit", (e) => this.handleFormSubmit(e));
+    struc.querySelector('#omac-selection-form').addEventListener("submit", (e) => this.handleFormSubmit(e));
 
-    let closeBtn = struc.querySelector('#omacookies-close-selection');
+    let closeBtn = struc.querySelector('#omac-close-selection');
     if (!OMAC.hasResponded) {
         closeBtn.disabled = true;
     }
@@ -133,7 +133,7 @@ SelectionModal.enableCloseButton = function (button) {
 SelectionModal.enableCloseModalOnBackdropClick = function (modalElement) {
     modalElement.addEventListener("click", (e) => {
         e.stopPropagation();
-        if (e.target.classList.contains("omacookies-backdrop")) {
+        if (e.target.classList.contains("omac-backdrop")) {
             this.close();
             OMAC.QuickLink.show();
         }

@@ -17,4 +17,4 @@ class YoutubeIframe extends IframeHandler {
     };
 }
 
-new YoutubeIframe(".omacookies-iframe-youtube", ["consent", "src", "yt-video-id"]);
+new YoutubeIframe(".omac-iframe-youtube", ["consent", "src", "yt-video-id"]);

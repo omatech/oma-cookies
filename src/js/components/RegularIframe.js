@@ -1,3 +1,3 @@
 import IframeHandler from "./IframeHandler";
 
-new IframeHandler(".omacookies-iframe");
+new IframeHandler(".omac-iframe");

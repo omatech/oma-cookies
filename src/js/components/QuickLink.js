@@ -1,26 +1,30 @@
 const QuickLink = {
-    elementId: "omacookies-quick-link",
+    elementId: "omac-quick-link",
     element: null,
     initialized: false,
     isShown: false,
 }
 
 QuickLink.hide = function () {
-    this.element.classList.add('omacookies-hide');
-    this.isShown = false;
+    if (this.initialized) {
+        this.element.classList.add('omac-hide');
+        this.isShown = false;
+    }
 }
 
 QuickLink.show = function () {
-    this.element.classList.remove('omacookies-hide');
-    this.isShown = true;
+    if (this.initialized) {
+        this.element.classList.remove('omac-hide');
+        this.isShown = true;
+    }
 }
 
 QuickLink.buildStructure = function () {
     const html = `
         <button id="${this.elementId}"
-            class="omacookies-quick-link ${OMAC.quickLinkPosition} ${this.isShown || OMAC.hasResponded ? '' : 'omacookies-hide'}"
+            class="omac-quick-link ${OMAC.quickLinkPosition} ${this.isShown || OMAC.hasResponded ? '' : 'omac-hide'}"
             aria-labelledby="${OMAC.SelectionModal.elementId}">
-            <i class="omacookies-icon-cookie"></i>
+            <i class="omac-icon-cookie"></i>
         </button>
     `;
 

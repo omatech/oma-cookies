@@ -24,6 +24,7 @@ const OMACookies = {
     format: "modal", //banner or modal
     quickLinkPosition: "bottom-right", // top-right top-left bottom-right bottom-left
     loadDelay: 3000,
+    enableQuickLink: true,
 };
 
 setReadOnlyProperty(OMACookies, "consentUpdatedEvent", new Event('consent-updated'));

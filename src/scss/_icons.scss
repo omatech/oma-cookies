@@ -10,7 +10,7 @@
     font-display: block;
 }
 
-[class^="omacookies-icon-"], [class*=" omacookies-icon-"] {
+[class^="omac-icon-"], [class*=" omac-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'omacookies-icons' !important;
     speak: never;
@@ -25,9 +25,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.omacookies-icon-close:before {
+.omac-icon-close:before {
     content: "\e900";
 }
-.omacookies-icon-cookie:before {
+.omac-icon-cookie:before {
     content: "\e901";
 }

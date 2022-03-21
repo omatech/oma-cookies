@@ -1,5 +1,5 @@
 const NoticeBox = {
-    elementId: "omacookies-notice-box",
+    elementId: "omac-notice-box",
     element: null,
     initialized: false,
     isOpen: false,
@@ -15,24 +15,24 @@ NoticeBox.open = function () {
 
 NoticeBox.buildStructure = function () {
     const html = `
-        <div id="${this.elementId}" class="omacookies-backdrop ${this.isOpen || !OMAC.hasResponded ? 'fade-in' : 'omacookies-hide'}">
-            <div class="omacookies-notice omacookies-box omacookies-${OMAC.format}">
-                <header class="omacookies-box-header">
-                    <h3 class="omacookies-title">${OMAC.trans.consent_box_title}</h3>
+        <div id="${this.elementId}" class="omac-backdrop ${this.isOpen || !OMAC.hasResponded ? 'fade-in' : 'omac-hide'}">
+            <div class="omac-notice omac-box omac-${OMAC.format}">
+                <header class="omac-box-header">
+                    <h3 class="omac-title">${OMAC.trans.consent_box_title}</h3>
                 </header>
-                <div class="omacookies-box-body">
-                    <p class="omacookies-text">${OMAC.trans.consent_box_description}</p>
-                    <a href="${OMAC.readMoreLink}" target="_blank" class="omacookies-read-more"
+                <div class="omac-box-body">
+                    <p class="omac-text">${OMAC.trans.consent_box_description}</p>
+                    <a href="${OMAC.readMoreLink}" target="_blank" class="omac-read-more"
                         aria-label="${OMAC.trans.read_more_label}">
                         ${OMAC.trans.read_more}
                     </a>
                 </div>
-                <footer class="omacookies-box-footer">
-                    <button id="omacookies-selection-btn" class="omacookies-btn-secondary"
-                        aria-label="${OMAC.trans.customize_cookies_btn_label}" aria-labelledby="omacookies-selection">
+                <footer class="omac-box-footer">
+                    <button id="omac-selection-btn" class="omac-btn-secondary"
+                        aria-label="${OMAC.trans.customize_cookies_btn_label}" aria-labelledby="omac-selection">
                         ${OMAC.trans.customize_cookies_btn}
                     </button>
-                    <button id="omacookies-accept-all-btn" class="omacookies-btn-primary">
+                    <button id="omac-accept-all-btn" class="omac-btn-primary">
                         ${OMAC.trans.accept_all_cookies_btn}
                     </button>
                 </footer>
@@ -45,11 +45,12 @@ NoticeBox.buildStructure = function () {
 
     const struc = template.firstElementChild;
 
-    struc.querySelector('#omacookies-selection-btn').addEventListener("click", () => {
+    struc.querySelector('#omac-selection-btn').addEventListener("click", () => {
         this.close();
         OMAC.SelectionModal.open();
     });
-    struc.querySelector('#omacookies-accept-all-btn').addEventListener("click", () => {
+
+    struc.querySelector('#omac-accept-all-btn').addEventListener("click", () => {
         window.dispatchEvent(new CustomEvent('update-consent-config', {detail: 'all'}));
         this.close();
         OMAC.QuickLink.show();

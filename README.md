@@ -31,6 +31,10 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 </li>
 
 <li>
+<a href="#methods">Methods</a>
+</li>
+
+<li>
 <a href="#configuration">Configuration</a>
 <ul>
 <li><a href="#lang-strings">Override language strings</a></li>
@@ -180,6 +184,17 @@ for any other attribute. See the attribute `width` shown in the example.
 >
     console.log("Hello World!");
 </script>
+```
+
+<p align="right"><a href="#top">↑ Back to top</a></p>
+
+<!-- CONFIGURATION -->
+<h2 id="methods">Methods</h2>
+
+<h3>Open cookie consent selection modal</h3>
+
+```js
+window.OMAC.SelectionModal.open();
 ```
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
