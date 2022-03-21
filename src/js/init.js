@@ -7,4 +7,4 @@ window.addEventListener("load", OMAC.delayedLoad(function () {
     if (OMAC.enableQuickLink) {
         elem.append(OMAC.QuickLink.init());
     }
-}, 200));
+}, 500));

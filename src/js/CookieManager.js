@@ -1,6 +1,3 @@
-window.addEventListener("load", OMAC.delayedLoad(OMAC.updateConsent));
-window.addEventListener('update-consent-config', e => OMAC.updateConsent(e.detail));
-
 /**
  * Sets all consent settings from the saved or set cookie from newCookieValue and refreshes consent form
  * @param {string,null} newCookieValue
@@ -21,3 +18,6 @@ OMAC.updateConsent = (newCookieValue = null) => {
 
     window.dispatchEvent(OMAC.consentUpdatedEvent);
 };
+
+window.addEventListener("load", OMAC.delayedLoad(OMAC.updateConsent));
+window.addEventListener('update-consent-config', e => OMAC.updateConsent(e.detail));

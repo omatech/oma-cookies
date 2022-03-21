@@ -7,7 +7,7 @@
   \*********************************/
 /***/ (() => {
 
-window.addEventListener("load",OMAC.delayedLoad(OMAC.updateConsent));window.addEventListener("update-consent-config",function(e){return OMAC.updateConsent(e.detail)});OMAC.updateConsent=function(){var newCookieValue=arguments.length>0&&arguments[0]!==undefined?arguments[0]:null;if(newCookieValue!==null){OMAC.hasResponded=true;OMAC.cookie=newCookieValue;OMAC.setCookie("omacookies-consent",newCookieValue)}else{OMAC.cookie=OMAC.getCookie("omacookies-consent");OMAC.hasResponded=OMAC.cookie!==null}var all=OMAC.consent.all=OMAC.strContainsAny(OMAC.cookie,"all");OMAC.consent.statistics=all||OMAC.strContainsAny(OMAC.cookie,"statistics");OMAC.consent.marketing=all||OMAC.strContainsAny(OMAC.cookie,"marketing");window.dispatchEvent(OMAC.consentUpdatedEvent)};
+OMAC.updateConsent=function(){var newCookieValue=arguments.length>0&&arguments[0]!==undefined?arguments[0]:null;if(newCookieValue!==null){OMAC.hasResponded=true;OMAC.cookie=newCookieValue;OMAC.setCookie("omacookies-consent",newCookieValue)}else{OMAC.cookie=OMAC.getCookie("omacookies-consent");OMAC.hasResponded=OMAC.cookie!==null}var all=OMAC.consent.all=OMAC.strContainsAny(OMAC.cookie,"all");OMAC.consent.statistics=all||OMAC.strContainsAny(OMAC.cookie,"statistics");OMAC.consent.marketing=all||OMAC.strContainsAny(OMAC.cookie,"marketing");window.dispatchEvent(OMAC.consentUpdatedEvent)};window.addEventListener("load",OMAC.delayedLoad(OMAC.updateConsent));window.addEventListener("update-consent-config",function(e){return OMAC.updateConsent(e.detail)});
 
 /***/ }),
 
@@ -105,7 +105,7 @@ function _typeof(obj){"@babel/helpers - typeof";return _typeof="function"==typeo
   \************************/
 /***/ (() => {
 
-window.addEventListener("load",OMAC.delayedLoad(function(){var elem=document.getElementById(OMAC.elementId);elem.classList.add("omacookies");elem.innerHTML="";elem.append(OMAC.NoticeBox.init());elem.append(OMAC.SelectionModal.init());if(OMAC.enableQuickLink){elem.append(OMAC.QuickLink.init())}},200));
+window.addEventListener("load",OMAC.delayedLoad(function(){var elem=document.getElementById(OMAC.elementId);elem.classList.add("omacookies");elem.innerHTML="";elem.append(OMAC.NoticeBox.init());elem.append(OMAC.SelectionModal.init());if(OMAC.enableQuickLink){elem.append(OMAC.QuickLink.init())}},500));
 
 /***/ }),
 
