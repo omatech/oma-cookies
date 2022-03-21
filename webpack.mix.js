@@ -4,6 +4,7 @@ mix.copy('src/scss', 'dist/scss');
 mix.copy('src/fonts', 'dist/fonts');
 
 mix.sass('src/scss/omacookies.scss', 'css/omacookies.css');
+mix.minify('dist/css/omacookies.css');
 mix.js('src/js/main.js', 'dist/js/omacookies.js');
 mix.minify('dist/js/omacookies.js', "", true);
 mix.setResourceRoot('..');

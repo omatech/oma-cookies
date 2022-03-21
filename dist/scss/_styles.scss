@@ -1,6 +1,7 @@
 .omacookies {
     font-family: $default-font-family;
     @include rem(font-size, 16px);
+    color: $clr-text;
 }
 
 .omacookies-backdrop {
