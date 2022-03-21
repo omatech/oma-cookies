@@ -32,6 +32,11 @@ Built-in solution that allows the control of cookies, <br>enabling GDPR complian
 
 <li>
 <a href="#methods">Methods</a>
+<ul>
+<li>
+<a href="#method-open-consent">Open cookies consent selection modal</a>
+</li>
+</ul>
 </li>
 
 <li>
@@ -188,10 +193,9 @@ for any other attribute. See the attribute `width` shown in the example.
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
 
-<!-- CONFIGURATION -->
 <h2 id="methods">Methods</h2>
 
-<h3>Open cookie consent selection modal</h3>
+<h3 id="method-open-consent">Open cookies consent selection modal</h3>
 
 ```js
 window.OMAC.SelectionModal.open();
@@ -199,7 +203,6 @@ window.OMAC.SelectionModal.open();
 
 <p align="right"><a href="#top">↑ Back to top</a></p>
 
-<!-- CONFIGURATION -->
 <h2 id="configuration">Configuration</h2>
 
 Somewhere after the import of the `omacookies` JS file we will override attributes from the main object.
@@ -250,6 +253,16 @@ Here we can set the appearance of the initial cookie dialog. The allowed values 
 ```js
 window.OMAC.format = "banner";
 ```
+
+<h3 id="quick-link">Enable/disable quick link</h3>
+
+The quick link is enabled by default. Disable it setting the following:
+
+```js
+window.OMAC.enableQuickLink = false;
+```
+
+*To open the cookies selection modal when disabled, use the <a href="#method-open-consent">this method</a>*
 
 <h3 id="quick-link">Quick link position</h3>
 
