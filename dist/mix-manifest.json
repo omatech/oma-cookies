@@ -2,14 +2,10 @@
     "/js/omacookies.js": "/js/omacookies.js",
     "/css/omacookies.css": "/css/omacookies.css",
     "/scss/_base.scss": "/scss/_base.scss",
-    "/scss/_icons.scss": "/scss/_icons.scss",
     "/scss/_reset.scss": "/scss/_reset.scss",
     "/scss/_styles.scss": "/scss/_styles.scss",
     "/scss/_variables.scss": "/scss/_variables.scss",
     "/scss/omacookies.scss": "/scss/omacookies.scss",
-    "/fonts/omacookies-icons.eot": "/fonts/omacookies-icons.eot",
-    "/fonts/omacookies-icons.svg": "/fonts/omacookies-icons.svg",
-    "/fonts/omacookies-icons.ttf": "/fonts/omacookies-icons.ttf",
-    "/fonts/omacookies-icons.woff": "/fonts/omacookies-icons.woff",
+    "/css/omacookies.min.css": "/css/omacookies.min.css",
     "/js/omacookies.min.js": "/js/omacookies.min.js"
 }

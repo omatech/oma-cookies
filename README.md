@@ -91,21 +91,20 @@ There are 2 approaches depending on your styling method:
 **A) If you are *ONLY* overriding CSS classes => Import the compiled CSS file**
 
 ```sass
-@import "~@omatech/oma-cookies/dist/css/omacookies.css"
+@import "~@omatech/oma-cookies/dist/css/omacookies.min.css"
 ```
 
 Optionally you can copy into a public folder the CSS file located inside
 the `/node_modules/@omatech/oma-cookies/dist/css` folder and link it in your HTML layout
 
 ```html
-<link href="/path_to_copied_file/omacookies.css" rel="stylesheet">
+<link href="/path_to_copied_file/omacookies.min.css" rel="stylesheet">
 ```
 
 **B) If you want to override the variables and CSS classes => Import all the separated files**
 
 ```sass
 @import "~@omatech/oma-cookies/dist/scss/base"
-@import "~@omatech/oma-cookies/dist/scss/reset"
 @import "~@omatech/oma-cookies/dist/scss/variables"
 //Your own SCSS file overriding the variables from the file above
 @import "variables"
@@ -142,7 +141,7 @@ the ID would be `uu5k19UaCT0`
 
 ```html
 <div
-    class="omacookies-iframe-youtube"
+    class="omac-iframe-youtube"
     data-omacookies-consent="marketing"
     data-omacookies-yt-video-id="uu5k19UaCT0"
 ></div>
@@ -157,7 +156,7 @@ for any other attribute. See the attribute `width` shown in the example.
 
 ```html
 <div
-    class="omacookies-iframe"
+    class="omac-iframe"
     data-omacookies-consent="statistics"
     data-omacookies-src="https://example.com/"
     data-omacookies-width="720"
@@ -172,7 +171,7 @@ for any other attribute. See the attribute `width` shown in the example.
 
 ```html
 <script
-    class="omacookies-script"
+    class="omac-script"
     type="text/plain"
     data-omacookies-consent="statistics"
     src="https://example.com/"
@@ -183,7 +182,7 @@ for any other attribute. See the attribute `width` shown in the example.
 
 ```html
 <script
-    class="omacookies-script"
+    class="omac-script"
     type="text/plain"
     data-omacookies-consent="statistics"
 >

@@ -1,6 +1,7 @@
 .omacookies {
     font-family: $default-font-family;
     @include rem(font-size, 16px);
+    color: $clr-text;
 }
 
 .omac-backdrop {
@@ -181,12 +182,28 @@
 
 .omac-close {
     background-color: transparent;
-    @include rem(font-size, 28px);
-    line-height: 1;
+    @include rem(width, 32px);
+    @include rem(height, 32px);
     color: $clr-text;
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.3s ease;
+
+    &:before, &:after {
+        content: "";
+        display: block;
+        @include rem(width, 20px);
+        @include rem(height, 3px);
+        background-color: black;
+        position: absolute;
+        @include rem(left, calc(50% - 10px));
+        top: 50%;
+        transform-origin: center;
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
 
     &:hover {
         opacity: 0.6;
@@ -202,8 +219,8 @@
     display: none !important;
 }
 
-.omac-iframe, .omac-iframe-youtube {
-
+.omac-iframe,
+.omac-iframe-youtube {
     width: 100%;
     padding-bottom: calc(9 / 16 * 100%);
     position: relative;
@@ -233,43 +250,46 @@
         justify-content: center;
         @include rem(padding, 16px);
         text-align: center;
+    }
 
-        .omac-icon-cookie {
-            color: $clr-bg;
-            @include rem(font-size, 114px);
-            line-height: 1;
-            opacity: 0.3;
-            @include media('screen', '<tablet') {
-                display: none;
-            }
+    .omac-icon-cookie {
+        color: $clr-bg;
+        @include rem(width, 84px);
+        @include rem(margin-bottom, 10px);
+        opacity: 0.3;
+        @include media('screen', '<tablet') {
+            display: none;
         }
+        path {
+            fill: $clr-bg;
+        }
+    }
 
-        .omac-title {
-            font-weight: normal;
-            @include rem(max-width, 280px);
-            @include rem(font-size, 24px);
-            @include rem(margin-bottom, 8px);
-            line-height: 1.4;
-            @include media('screen', '>=tablet') {
-                @include rem(font-size, 28px);
-            }
-            @include media('screen', '<phone') {
-                display: none;
-            }
+    .omac-title {
+        font-weight: normal;
+        @include rem(max-width, 280px);
+        @include rem(font-size, 24px);
+        @include rem(margin-bottom, 8px);
+        line-height: 1.4;
+        @include media('screen', '>=tablet') {
+            @include rem(font-size, 28px);
         }
+        @include media('screen', '<phone') {
+            display: none;
+        }
+    }
 
-        .omac-text {
-            @include rem(font-size, 12px);
-            @include rem(max-width, 280px);
-            @include rem(margin-bottom, 16px);
-            @include media('screen', '>=phone') {
-                @include rem(font-size, 14px);
-            }
+    .omac-text {
+        @include rem(font-size, 12px);
+        @include rem(max-width, 280px);
+        @include rem(margin-bottom, 16px);
+        @include media('screen', '>=phone') {
+            @include rem(font-size, 14px);
         }
+    }
 
-        .omac-btn-secondary {
-            @include rem(width, 220px);
-        }
+    .omac-btn-secondary {
+        @include rem(width, 220px);
     }
 }
 
@@ -300,10 +320,12 @@
     }
 
     .omac-icon-cookie {
-        line-height: 1;
-        @include rem(font-size, 38px);
+        @include rem(width, 30px);
         @include media('screen', '<tablet') {
-            @include rem(font-size, 28px);
+            @include rem(width, 22px);
+        }
+        path {
+            fill: $clr-bg;
         }
     }
 
