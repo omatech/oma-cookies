@@ -4,7 +4,7 @@
     color: $clr-text;
 }
 
-.omacookies-backdrop {
+.omac-backdrop {
     opacity: 0;
     transition: opacity 0.3s ease;
     position: fixed;
@@ -28,17 +28,17 @@
     }
 }
 
-.omacookies-banner {
-    &.omacookies-box {
+.omac-banner {
+    &.omac-box {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         text-align: center;
 
-        .omacookies-box-header,
-        .omacookies-box-body,
-        .omacookies-box-footer {
+        .omac-box-header,
+        .omac-box-body,
+        .omac-box-footer {
             margin: 0 auto;
             @include rem(padding-left, 16px);
             @include rem(padding-right, 16px);
@@ -53,7 +53,7 @@
             }
         }
 
-        .omacookies-box-body {
+        .omac-box-body {
             position: relative;
             overflow-y: initial;
             @include media('screen', '>=tablet') {
@@ -61,7 +61,7 @@
             }
         }
 
-        .omacookies-read-more {
+        .omac-read-more {
             @include media('screen', '>=tablet') {
                 position: absolute;
                 @include rem(left, 16px);
@@ -71,7 +71,7 @@
     }
 }
 
-.omacookies-box {
+.omac-box {
     background-color: $clr-bg;
     width: 100%;
     display: flex;
@@ -80,7 +80,7 @@
     justify-content: flex-start;
     position: relative;
 
-    .omacookies-close {
+    .omac-close {
         position: absolute;
         @include rem(top, 8px);
         @include rem(right, 8px);
@@ -138,7 +138,7 @@
             @include rem(padding, 12px 80px 50px);
         }
 
-        [class^="omacookies-btn"] {
+        [class^="omac-btn"] {
             @include media('screen', '<tablet') {
                 width: 100%;
                 @include rem(margin-top, 8px);
@@ -150,8 +150,8 @@
     }
 }
 
-.omacookies-btn-primary,
-.omacookies-btn-secondary {
+.omac-btn-primary,
+.omac-btn-secondary {
     font-weight: $w-bold;
     cursor: pointer;
     @include rem(font-size, 14px);
@@ -169,18 +169,18 @@
     }
 }
 
-.omacookies-btn-primary {
+.omac-btn-primary {
     background-color: $clr-primary;
     color: $clr-bg;
 }
 
-.omacookies-btn-secondary {
+.omac-btn-secondary {
     color: $clr-primary;
     background-color: transparent;
     border: 1px solid $clr-primary;
 }
 
-.omacookies-close {
+.omac-close {
     background-color: transparent;
     @include rem(font-size, 28px);
     line-height: 1;
@@ -188,20 +188,23 @@
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.3s ease;
+
     &:hover {
         opacity: 0.6;
     }
+
     &:disabled, &[disabled] {
         pointer-events: none;
         opacity: 0.1;
     }
 }
 
-.omacookies-hide {
+.omac-hide {
     display: none !important;
 }
 
-.omacookies-iframe-youtube {
+.omac-iframe, .omac-iframe-youtube {
+
     width: 100%;
     padding-bottom: calc(9 / 16 * 100%);
     position: relative;
@@ -232,7 +235,7 @@
         @include rem(padding, 16px);
         text-align: center;
 
-        .omacookies-icon-cookie {
+        .omac-icon-cookie {
             color: $clr-bg;
             @include rem(font-size, 114px);
             line-height: 1;
@@ -242,7 +245,7 @@
             }
         }
 
-        .omacookies-title {
+        .omac-title {
             font-weight: normal;
             @include rem(max-width, 280px);
             @include rem(font-size, 24px);
@@ -256,7 +259,7 @@
             }
         }
 
-        .omacookies-text {
+        .omac-text {
             @include rem(font-size, 12px);
             @include rem(max-width, 280px);
             @include rem(margin-bottom, 16px);
@@ -265,13 +268,13 @@
             }
         }
 
-        .omacookies-btn-secondary {
+        .omac-btn-secondary {
             @include rem(width, 220px);
         }
     }
 }
 
-.omacookies-quick-link {
+.omac-quick-link {
     position: fixed;
     z-index: 9999;
     display: flex;
@@ -297,7 +300,7 @@
         @include rem(left, 12px);
     }
 
-    .omacookies-icon-cookie {
+    .omac-icon-cookie {
         line-height: 1;
         @include rem(font-size, 38px);
         @include media('screen', '<tablet') {
@@ -326,13 +329,13 @@
     }
 }
 
-.omacookies-modal {
+.omac-modal {
     @include rem(max-width, 780px);
     max-height: 100%;
     flex: 0 0 auto;
 }
 
-.omacookies-read-more {
+.omac-read-more {
     display: inline-block;
     color: $clr-secondary;
     font-weight: $w-bold;
@@ -341,7 +344,7 @@
     text-decoration: underline;
 }
 
-.omacookies-switch-group {
+.omac-switch-group {
     border-bottom: 1px solid $clr-border;
     display: flex;
     flex-direction: row;
@@ -356,7 +359,7 @@
         display: none;
     }
 
-    .omacookies-switch-text {
+    .omac-switch-text {
         @include rem(font-size, 14px);
         flex: 1 1 auto;
         line-height: 1.6;
@@ -367,7 +370,7 @@
         }
     }
 
-    .omacookies-switch {
+    .omac-switch {
         flex: 0 0 auto;
         @include rem(margin-left, 16px);
         cursor: pointer;
@@ -392,7 +395,7 @@
         }
     }
 
-    input:checked + .omacookies-switch {
+    input:checked + .omac-switch {
         background-color: $clr-primary;
 
         &:after {
@@ -400,13 +403,13 @@
         }
     }
 
-    input:disabled + .omacookies-switch {
+    input:disabled + .omac-switch {
         opacity: 0.3;
         cursor: default;
     }
 }
 
-.omacookies-title {
+.omac-title {
     @include rem(font-size, 15px);
     line-height: 1.8;
     font-weight: $w-bold;
@@ -415,13 +418,13 @@
     }
 }
 
-.omacookies-text {
+.omac-text {
     @include rem(font-size, 14px);
     line-height: 1.8;
     @include rem(margin-bottom, 8px);
 }
 
-.omacookies-visually-hidden {
+.omac-visually-hidden {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;

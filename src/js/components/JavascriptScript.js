@@ -19,7 +19,7 @@
     const disableScripts = script => script.setAttribute('type', 'text/plain');
 
     const handleCookiesConsent = () => {
-        const elements = document.querySelectorAll('script.omacookies-script');
+        const elements = document.querySelectorAll('script.omac-script');
 
         for (const elem of elements) {
             const consentType = elem.getAttribute('data-omacookies-consent');
