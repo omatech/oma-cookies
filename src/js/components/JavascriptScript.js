@@ -1,5 +1,5 @@
 (() => {
-    const enableScripts = script => {
+    const enableScript = script => {
         const src = script.getAttribute('src');
 
         if (src) {
@@ -10,13 +10,14 @@
             const newScript = document.createElement('script');
             newScript.className = script.className;
             newScript.setAttribute('type', 'text/javascript');
-            newScript.innerText = script.innerText;
+            newScript.setAttribute('data-omacookies-consent', script.getAttribute('data-omacookies-consent'));
+            newScript.innerText = script.innerText.replace("<br>", "");
             script.parentNode.insertBefore(newScript, script);
             script.remove();
         }
     };
 
-    const disableScripts = script => script.setAttribute('type', 'text/plain');
+    const disableScript = script => script.setAttribute('type', 'text/plain');
 
     const handleCookiesConsent = () => {
         const elements = document.querySelectorAll('script.omac-script');
@@ -24,9 +25,9 @@
         for (const elem of elements) {
             const consentType = elem.getAttribute('data-omacookies-consent');
             if (OMAC.consent[consentType]) {
-                enableScripts(elem);
+                enableScript(elem);
             } else {
-                disableScripts(elem);
+                disableScript(elem);
             }
         }
     };
