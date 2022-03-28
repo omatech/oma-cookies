@@ -23,7 +23,7 @@ const OMACookies = {
     elementId: "omacookies",
     format: "modal", //banner or modal
     quickLinkPosition: "bottom-right", // top-right top-left bottom-right bottom-left
-    loadDelay: 3000,
+    loadDelay: 0,
     enableQuickLink: true,
 };
 
